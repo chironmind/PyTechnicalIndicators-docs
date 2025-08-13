@@ -1,0 +1,72 @@
+site_name: PyTechnicalIndicators Documentation
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - API Reference:
+    - Overview: api/index.md
+    - Candle Indicators: api/candle-indicators.md
+    - Chart Trends: api/chart-trends.md
+    - Correlation Indicators: api/correlation-indicators.md
+    - Momentum Indicators: api/momentum-indicators.md
+    - Moving Average: api/moving-average.md
+    - Other Indicators: api/other-indicators.md
+    - Standard Indicators: api/standard-indicators.md
+    - Strength Indicators: api/strength-indicators.md
+    - Trend Indicators: api/trend-indicators.md
+    - Volatility Indicators: api/volatility-indicators.md
+  - Tutorials: 
+    - Overview: tutorials/index.md
+    - Using PyTechnicalIndicators with pandas: tutorials/pandas.md
+    - Visualizing Indicators with Plotly: tutorials/plotly.md
+    - Advanced Usage of PyTechnicalIndicators: tutorials/advanced.md
+    - Connecting to a Market Data API: tutorials/api-connection.md
+  - How-To Guides: 
+    - Overview: howto/index.md
+    - Bulk vs Single Functions: howto/bulk-vs-single.md
+    - Choose Constant Model Type: howto/choose-constant-model-type.md
+    - Choose Deviation Model: howto/choose-deviation-model.md
+    - Choose Period: howto/choose-period.md
+    - McGinley Dynamic Bands: howto/mcginley-dynamic.md
+  - Benchmarks: 
+    - Overview: benchmarks/index.md
+    - Candle Indicators: 
+      - Large Dataset: benchmarks/candle-indicators/large.md
+      - Medium Dataset: benchmarks/candle-indicators/medium.md
+      - Small Dataset: benchmarks/candle-indicators/small.md
+    - Chart Trends: 
+      - Large Dataset: benchmarks/chart-trends/large.md
+      - Medium Dataset: benchmarks/chart-trends/medium.md
+      - Small Dataset: benchmarks/chart-trends/small.md
+    - Correlation Indicators:
+      - Large Dataset: benchmarks/correlation-indicators/large.md
+      - Medium Dataset: benchmarks/correlation-indicators/medium.md
+      - Small Dataset: benchmarks/correlation-indicators/small.md
+    - Momentum Indicators: 
+      - Large Dataset: benchmarks/momentum-indicators/large.md
+      - Medium Dataset: benchmarks/momentum-indicators/medium.md
+      - Small Dataset: benchmarks/momentum-indicators/small.md   
+    - Moving Average: 
+      - Large Dataset: benchmarks/moving-average/large.md
+      - Medium Dataset: benchmarks/moving-average/medium.md
+      - Small Dataset: benchmarks/moving-average/small.md
+    - Other Indicators: 
+      - Large Dataset: benchmarks/other-indicators/large.md
+      - Medium Dataset: benchmarks/other-indicators/medium.md
+      - Small Dataset: benchmarks/other-indicators/small.md
+    - Standard Indicators: 
+      - Large Dataset: benchmarks/standard-indicators/large.md
+      - Medium Dataset: benchmarks/standard-indicators/medium.md
+      - Small Dataset: benchmarks/standard-indicators/small.md
+    - Strength Indicators: 
+      - Large Dataset: benchmarks/strength-indicators/large.md
+      - Medium Dataset: benchmarks/strength-indicators/medium.md
+      - Small Dataset: benchmarks/strength-indicators/small.md
+    - Trend Indicators: 
+      - Large Dataset: benchmarks/trend-indicators/large.md
+      - Medium Dataset: benchmarks/trend-indicators/medium.md
+      - Small Dataset: benchmarks/trend-indicators/small.md
+    - Volatility Indicators: 
+      - Large Dataset: benchmarks/volatility-indicators/large.md
+      - Medium Dataset: benchmarks/volatility-indicators/medium.md
+      - Small Dataset: benchmarks/volatility-indicators/small.md
