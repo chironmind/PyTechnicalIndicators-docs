@@ -5,6 +5,9 @@ build:
   tools:
     python: "3.10"
   os: ubuntu-22.04
+  jobs:
+    pre_install:
+      - pip install mkdocs mkdocs-material
 
 mkdocs:
   configuration: mkdocs.yml
