@@ -76,7 +76,7 @@ Find PyTechnicalIndicators source code on [GitHub](https://github.com/chironmind
 
 - [GitHub Discussions](https://github.com/chironmind/PyTechnicalIndicators/discussions)
 - [Open an Issue](https://github.com/chironmind/PyTechnicalIndicators/issues)
-- [Contributing Guide](CONTRIBUTING.md)
+- [Contributing Guide](https://github.com/chironmind/PyTechnicalIndicators/blob/main/CONTRIBUTING.md)
 
 ---
 
