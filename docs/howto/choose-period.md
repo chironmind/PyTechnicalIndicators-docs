@@ -1,6 +1,6 @@
-# How to determine the best period for a PyTechnicalIndicators function
+# How to determine the best period for a Centaur Technical Indicators function
 
-This guide shows how to programmatically determine the best period for your indicator using the Python package PyTechnicalIndicators.
+This guide shows how to programmatically determine the best period for your indicator using the Python package Centaur Technical Indicators.
 
 The rating model is overly simplified and should be refined to suit your needs before usage.
 
@@ -16,10 +16,10 @@ The rating model is overly simplified and should be refined to suit your needs b
 
 ## 📦 Requirements
 
-Install PyTechnicalIndicators:
+Install Centaur Technical Indicators:
 
 ```bash
-pip install pytechnicalindicators
+pip install centaur_technical_indicators
 ```
 
 ---
@@ -169,7 +169,7 @@ if __name__ == "__main__":
 
 ## 🧪 Output
 
-A runnable sample of the code can be found in [`choose_period.py`](https://github.com/chironmind/PyTechnicalIndicators-How-To-guides/blob/main/examples/choose_period.py)
+A runnable sample of the code can be found in [`choose_period.py`](https://github.com/chironmind/Centaur Technical Indicators-How-To-guides/blob/main/examples/choose_period.py)
 
 ```text
 Loaded 251 prices

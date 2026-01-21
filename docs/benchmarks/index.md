@@ -1,6 +1,6 @@
-# PyTechnicalIndicators Benchmarks
+# Centaur Technical Indicators Benchmarks
 
-Performance benchmarks for PyTechnicalIndicators library using pytest-benchmark.
+Performance benchmarks for Centaur Technical Indicators library using pytest-benchmark.
 
 ## Setup
 
@@ -70,7 +70,7 @@ pytest -k "large"
 
 ### Before you start
 
-Each indicator is benchmarked according to the PyTechnicalIndicators code file they live in.
+Each indicator is benchmarked according to the Centaur Technical Indicators code file they live in.
 
 For example, `relative_strength_index` lives in the `momentum_indicators` file, its benchmark
 file will be `test_momentum_indicators_bench.py`.

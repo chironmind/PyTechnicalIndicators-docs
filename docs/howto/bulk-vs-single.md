@@ -1,6 +1,6 @@
-# When to choose bulk vs single functions in PyTechnicalIndicators
+# When to choose bulk vs single functions in Centaur Technical Indicators
 
-This guide shows when to choose the bulk version of a function or the single version of a function using the Python package PyTechnicalIndicators.
+This guide shows when to choose the bulk version of a function or the single version of a function using the Python package Centaur Technical Indicators.
 
 ---
 
@@ -12,7 +12,7 @@ This guide shows when to choose the bulk version of a function or the single ver
 
 ## 📦 Requirements
 
-Install PyTechnicalIndicators:
+Install Centaur Technical Indicators:
 
 ```bash
 pip install pytechnicalindicators
@@ -96,7 +96,7 @@ Notes:
 
 ## 🧪 Example Output
 
-A runnable sample of the code can be found in [`bulk_vs_single.py`](https://github.com/chironmind/PyTechnicalIndicators-How-To-guides/blob/main/examples/bulk_vs_single.py)
+A runnable sample of the code can be found in [`bulk_vs_single.py`](https://github.com/chironmind/CentaurTechnicalIndicators-How-To-guides/blob/main/examples/bulk_vs_single.py)
 
 ```text
 Bulk RSIs: [47.49434607156126, 50.3221945432267, ..., 40.34609500741716]

@@ -1,6 +1,6 @@
 # API Reference
 
-Comprehensive documentation for all modules, classes, and functions available in PyTechnicalIndicators, as well as a full indicator list.
+Comprehensive documentation for all modules, classes, and functions available in Centaur Technical Indicators, as well as a full indicator list.
 
 ## Quick Navigation
 

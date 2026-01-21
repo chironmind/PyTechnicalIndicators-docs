@@ -35,7 +35,7 @@ List of moving averages
 
 #### Example
 ```python
-from pytechnicalindicators import moving_average as ma
+from centaur_technical_indicators import moving_average as ma
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -77,7 +77,7 @@ List of McGinley dynamics
 
 #### Example
 ```python
-from pytechnicalindicators import moving_average as ma
+from centaur_technical_indicators import moving_average as ma
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -124,7 +124,7 @@ Moving average value
 
 #### Example
 ```python
-from pytechnicalindicators import moving_average as ma
+from centaur_technical_indicators import moving_average as ma
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -165,7 +165,7 @@ McGinley dynamic value
 
 #### Example
 ```python
-from pytechnicalindicators import moving_average as ma
+from centaur_technical_indicators import moving_average as ma
 
 mcginley = ma.single.mcginley_dynamic(
     latest_price=114.0,

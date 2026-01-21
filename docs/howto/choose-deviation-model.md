@@ -1,6 +1,6 @@
-# How to determine the best `deviation_model` for a PyTechnicalIndicators function
+# How to determine the best `deviation_model` for a Centaur Technical Indicators function
 
-This guide shows how to programmatically determine the best `deviation_model` for your indicator using the Python package PyTechnicalIndicators.
+This guide shows how to programmatically determine the best `deviation_model` for your indicator using the Python package Centaur Technical Indicators.
 
 The rating model is overly simplified and should be refined to suit your needs before usage.
 
@@ -16,10 +16,10 @@ The rating model is overly simplified and should be refined to suit your needs b
 
 ## 📦 Requirements
 
-Install PyTechnicalIndicators:
+Install Centaur Technical Indicators:
 
 ```bash
-pip install pytechnicalindicators
+pip install centaur_technical_indicators
 ```
 
 ---
@@ -206,7 +206,7 @@ if __name__ == "__main__":
 
 ## 🧪 Output
 
-A runnable sample of the code can be found in [`choose_deviation_model.py`](https://github.com/chironmind/PyTechnicalIndicators-How-To-guides/blob/main/examples/choose_deviation_model.py)
+A runnable sample of the code can be found in [`choose_deviation_model.py`](https://github.com/chironmind/CentaurTechnicalIndicators-How-To-guides/blob/main/examples/choose_deviation_model.py)
 
 ```text
 Loaded 251 prices

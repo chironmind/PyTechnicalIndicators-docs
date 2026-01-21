@@ -37,7 +37,7 @@ List of simple moving averages
 
 #### Example
 ```python
-from pytechnicalindicators import standard_indicators as si
+from centaur_technical_indicators import standard_indicators as si
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -76,7 +76,7 @@ List of smoothed moving averages
 
 #### Example
 ```python
-from pytechnicalindicators import standard_indicators as si
+from centaur_technical_indicators import standard_indicators as si
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -119,7 +119,7 @@ List of exponential moving averages
 
 #### Example
 ```python
-from pytechnicalindicators import standard_indicators as si
+from centaur_technical_indicators import standard_indicators as si
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -160,7 +160,7 @@ List of Bollinger band tuples (lower band, MA, upper band)
 
 #### Example
 ```python
-from pytechnicalindicators import standard_indicators as si
+from centaur_technical_indicators import standard_indicators as si
 
 prices = [
     5224.0, 5223.28, 5238.34, 5294.39, 5306.26, 5297.43, 5311.95, 5314.53,
@@ -199,7 +199,7 @@ List of MACD tuples (MACD, Signal Line, Histogram)
 
 #### Example
 ```python
-from pytechnicalindicators import standard_indicators as si
+from centaur_technical_indicators import standard_indicators as si
 
 prices = [
     5006.28, 5058.21, 5069.38, 5032.25, 5095.91, 5109.44, 5060.61, 5042.65, 5049.49,
@@ -241,7 +241,7 @@ List of Relative Strength Index values
 
 #### Example
 ```python
-from pytechnicalindicators import standard_indicators as si
+from centaur_technical_indicators import standard_indicators as si
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -277,7 +277,7 @@ Simple moving average
 
 #### Example
 ```python
-from pytechnicalindicators import standard_indicators as si
+from centaur_technical_indicators import standard_indicators as si
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -311,7 +311,7 @@ Smoothed moving average
 
 #### Example
 ```python
-from pytechnicalindicators import standard_indicators as si
+from centaur_technical_indicators import standard_indicators as si
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -345,7 +345,7 @@ Exponential moving average
 
 #### Example
 ```python
-from pytechnicalindicators import standard_indicators as si
+from centaur_technical_indicators import standard_indicators as si
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -379,7 +379,7 @@ Bollinger band tuple (lower band, MA, upper band)
 
 #### Example
 ```python
-from pytechnicalindicators import standard_indicators as si
+from centaur_technical_indicators import standard_indicators as si
 
 prices = [
     5238.34, 5294.39, 5306.26, 5297.43, 5311.95, 5314.53, 5305.4, 5288.88, 5298.25,
@@ -414,7 +414,7 @@ MACD tuple (MACD, Signal Line, Histogram)
 
 #### Example
 ```python
-from pytechnicalindicators import standard_indicators as si
+from centaur_technical_indicators import standard_indicators as si
 
 prices = [
     5069.38, 5032.25, 5095.91, 5109.44, 5060.61, 5042.65, 5049.49, 5122.71,
@@ -451,7 +451,7 @@ Relative Strength Index value
 
 #### Example
 ```python
-from pytechnicalindicators import standard_indicators as si
+from centaur_technical_indicators import standard_indicators as si
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,

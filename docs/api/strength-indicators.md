@@ -43,7 +43,7 @@ List of Accumulation Distribution values
 
 #### Example
 ```python
-from pytechnicalindicators import strength_indicators as si
+from centaur_technical_indicators import strength_indicators as si
 
 highs = [103.0, 102.0, 105.0]
 lows = [99.0, 99.0, 100.0]
@@ -82,7 +82,7 @@ List of Positive Volume Index values
 
 #### Example
 ```python
-from pytechnicalindicators import strength_indicators as si
+from centaur_technical_indicators import strength_indicators as si
 
 close = [100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0, 112.0, 109.0]
 volume = [1000, 1200, 1500, 1100, 1300, 1400, 1250, 1600, 1800, 1350]
@@ -122,7 +122,7 @@ List of Negative Volume Index values
 
 #### Example
 ```python
-from pytechnicalindicators import strength_indicators as si
+from centaur_technical_indicators import strength_indicators as si
 
 close = [100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0, 112.0, 109.0]
 volume = [1000, 1200, 1500, 1100, 1300, 1400, 1250, 1600, 1800, 1350]
@@ -173,7 +173,7 @@ List of Relative Vigor Index values
 
 #### Example
 ```python
-from pytechnicalindicators import strength_indicators as si
+from centaur_technical_indicators import strength_indicators as si
 
 open_prices = [98.0, 101.5, 104.5, 102.5, 105.5, 107.5, 106.5, 109.5, 111.5, 108.5]
 high_prices = [105.0, 107.0, 110.0, 108.0, 111.0, 113.0, 112.0, 115.0, 117.0, 114.0]
@@ -220,7 +220,7 @@ Accumulation Distribution value
 
 #### Example
 ```python
-from pytechnicalindicators import strength_indicators as si
+from centaur_technical_indicators import strength_indicators as si
 
 ad = si.single.accumulation_distribution(
     high=103.0, low=99.0, close=102.0, volume=1600.0, previous_accumulation_distribution=0.0
@@ -254,7 +254,7 @@ Volume Index value
 
 #### Example
 ```python
-from pytechnicalindicators import strength_indicators as si
+from centaur_technical_indicators import strength_indicators as si
 
 vi = si.single.volume_index(
     current_close=110.0, previous_close=108.0, previous_volume_index=0.0
@@ -297,7 +297,7 @@ Relative Vigor Index value
 
 #### Example
 ```python
-from pytechnicalindicators import strength_indicators as si
+from centaur_technical_indicators import strength_indicators as si
 
 open_prices = [98.0, 101.5, 104.5, 102.5, 105.5, 107.5, 106.5, 109.5, 111.5, 108.5]
 high_prices = [105.0, 107.0, 110.0, 108.0, 111.0, 113.0, 112.0, 115.0, 117.0, 114.0]
