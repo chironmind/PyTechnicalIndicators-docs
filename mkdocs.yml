@@ -1,4 +1,4 @@
-site_name: PyTechnicalIndicators Documentation
+site_name: Centaur Technical Indicators Documentation
 theme:
   name: material
 nav:
@@ -17,9 +17,9 @@ nav:
     - Volatility Indicators: api/volatility-indicators.md
   - Tutorials: 
     - Overview: tutorials/index.md
-    - Using PyTechnicalIndicators with pandas: tutorials/pandas.md
+    - Using Centaur Technical Indicators with pandas: tutorials/pandas.md
     - Visualizing Indicators with Plotly: tutorials/plotly.md
-    - Advanced Usage of PyTechnicalIndicators: tutorials/advanced.md
+    - Advanced Usage of Centaur Technical Indicators: tutorials/advanced.md
     - Connecting to a Market Data API: tutorials/api-connection.md
   - How-To Guides: 
     - Overview: howto/index.md

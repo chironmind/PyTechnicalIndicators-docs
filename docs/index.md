@@ -1,10 +1,10 @@
-![PyTechnicalIndicators Banner](assets/pytechnicalindicators_banner.png)
+![Centaur Technical Indicators Banner](assets/pytechnicalindicators_banner.png)
 
-# PyTechnicalIndicators
+# Centaur Technical Indicators
 
 **Fast, configurable technical indicators for Python — powered by Rust.**
 
-PyTechnicalIndicators is a Python library delivering technical analysis with the speed and safety of Rust.  
+Centaur Technical Indicators is a Python library delivering technical analysis with the speed and safety of Rust.  
 Built for quants, traders, and developers who demand robust, high-performance financial analytics.
 
 ---
@@ -24,15 +24,15 @@ Built for quants, traders, and developers who demand robust, high-performance fi
 Install:
 
 ```bash
-pip install pytechnicalindicators
+pip install centaur_technical_indicators
 ```
 
 First indicator:
 
 ```python
-import pytechnicalindicators as pti
+import centaur_technical_indicators as cti
 prices = [100.2, 100.46, 100.53, 100.38, 100.19]
-ma = pti.moving_average(prices, "simple")
+ma = cti.moving_average(prices, "simple")
 print(f"Simple Moving Average: {ma}")
 ```
 
@@ -40,7 +40,7 @@ print(f"Simple Moving Average: {ma}")
 
 ## 📚 Indicator Coverage
 
-PyTechnicalIndicators covers:
+Centaur Technical Indicators covers:
 
 - **Standard**: SMA, EMA, Bollinger Bands, MACD, RSI
 - **Candle**: Ichimoku Cloud, Moving Constant Bands, Donchian, Keltner, Supertrend
@@ -68,15 +68,15 @@ PyTechnicalIndicators covers:
 
 ## 🗂️ Source Code
 
-Find PyTechnicalIndicators source code on [GitHub](https://github.com/chironmind/PyTechnicalIndicators).
+Find Centaur Technical Indicators source code on [GitHub](https://github.com/chironmind/CentaurTechnicalIndicators-Python).
 
 ---
 
 ## 🤝 Community & Contributing
 
-- [GitHub Discussions](https://github.com/chironmind/PyTechnicalIndicators/discussions)
-- [Open an Issue](https://github.com/chironmind/PyTechnicalIndicators/issues)
-- [Contributing Guide](https://github.com/chironmind/PyTechnicalIndicators/blob/main/CONTRIBUTING.md)
+- [GitHub Discussions](https://github.com/chironmind/CentaurTechnicalIndicators-Python/discussions)
+- [Open an Issue](https://github.com/chironmind/CentaurTechnicalIndicators-Python/issues)
+- [Contributing Guide](https://github.com/chironmind/CentaurTechnicalIndicators-Python/blob/main/CONTRIBUTING.md)
 
 ---
 
