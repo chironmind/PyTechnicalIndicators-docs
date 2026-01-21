@@ -15,7 +15,7 @@ This guide shows when to choose the bulk version of a function or the single ver
 Install Centaur Technical Indicators:
 
 ```bash
-pip install pytechnicalindicators
+pip install centaur_technical_indicators
 ```
 
 ---
@@ -51,7 +51,7 @@ The default RSI often uses 14 previous prices. If you have 53 days of data you c
 - When a new price comes in, use the single function on the latest window.
 
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 # 53 example closing prices
 data = [

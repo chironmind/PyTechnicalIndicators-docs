@@ -63,21 +63,21 @@ If you pass an invalid string, the API raises a Python `ValueError` with a list 
 
 ## Package Structure
 
-PyTechnicalIndicators is organized into indicator categories and modules:
+Centaur Technical Indicators is organized into indicator categories and modules:
 
 ```python
-import pytechnicalindicators
+import centaur_technical_indicators
 
-pytechnicalindicators.candle_indicators
-pytechnicalindicators.chart_trends
-pytechnicalindicators.correlation_indicators
-pytechnicalindicators.momentum_indicators
-pytechnicalindicators.moving_average
-pytechnicalindicators.other_indicators
-pytechnicalindicators.standard_indicators
-pytechnicalindicators.strength_indicators
-pytechnicalindicators.trend_indicators
-pytechnicalindicators.volatility_indicators
+centaur_technical_indicators.candle_indicators
+centaur_technical_indicators.chart_trends
+centaur_technical_indicators.correlation_indicators
+centaur_technical_indicators.momentum_indicators
+centaur_technical_indicators.moving_average
+centaur_technical_indicators.other_indicators
+centaur_technical_indicators.standard_indicators
+centaur_technical_indicators.strength_indicators
+centaur_technical_indicators.trend_indicators
+centaur_technical_indicators.volatility_indicators
 ```
 
 Each submodule contains indicator functions, often organized into:
@@ -86,7 +86,7 @@ Each submodule contains indicator functions, often organized into:
 
 **Example usage:**
 ```python
-from pytechnicalindicators.candle_indicators.bulk import supertrend
+from centaur_technical_indicators.candle_indicators.bulk import supertrend
 result = supertrend(high, low, close, "simple_moving_average", 3.0, 14)
 ```
 
@@ -94,7 +94,7 @@ result = supertrend(high, low, close, "simple_moving_average", 3.0, 14)
 
 ## Complete Indicators List
 
-Welcome to the comprehensive catalog of PyTechnicalIndicators! This page lists all 60+ technical indicators available in the library, organized by category for easy navigation.
+Welcome to the comprehensive catalog of Centaur Technical Indicators! This page lists all 60+ technical indicators available in the library, organized by category for easy navigation.
 
 ### Candle Indicators
 
@@ -113,10 +113,10 @@ Candle indicators analyze price patterns and chart formations from OHLC charts.
 
 #### Example Usage
 ```python
-import pytechnicalindicators as pti
+import centaur_technical_indicators as cti
 
 # Simple Moving Average with Standard Deviation Bands
-bb = pti.candle_indicators.bulk.moving_constant_bands(close, period=20, constant_model_type="simple_moving_average", deviation_model="standard_deviation", deviation_multiplier=2)
+bb = cti.candle_indicators.bulk.moving_constant_bands(close, period=20, constant_model_type="simple_moving_average", deviation_model="standard_deviation", deviation_multiplier=2)
 
 # Ichimoku Cloud
 ichimoku = pti.candle_indicators.bulk.ichimoku_cloud(highs, lows, closes, conversion_period=9, conversion_period=26, span_b_period=52)
@@ -366,5 +366,5 @@ volumes = [10000, 12000, 9500, 15000, 11000]
 
 ---
 
-**🎉 That's all 60+ indicators available in PyTechnicalIndicators!**
+**🎉 That's all 60+ indicators available in Centaur Technical Indicators!**
 

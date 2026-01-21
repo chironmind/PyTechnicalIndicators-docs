@@ -81,7 +81,7 @@ def load_prices_from_csv(path: str) -> list[float]:
 The default RSI period is 14. We’ll iterate from 2 to 15 to see if a different period performs better (excluding 1 to avoid degenerate windows).
 
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 model = "smoothed_moving_average"  # default for RSI
 # Example:
@@ -101,7 +101,7 @@ Note: For period p, rsi[0] corresponds to prices index i = p (0-based). We’ll 
 
 ```python
 def choose_best_rsi_period(prices: list[float], min_p: int = 2, max_p: int = 15) -> tuple[int, float]:
-    from pytechnicalindicators import momentum_indicators as mi
+    from centaur_technical_indicators import momentum_indicators as mi
 
     best_rating = -1.0
     best_period = min_p

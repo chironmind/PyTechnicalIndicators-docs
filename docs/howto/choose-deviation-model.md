@@ -83,7 +83,7 @@ The default deviation model is the standard deviation; however other models may 
 We’ll test several deviation models while keeping the constant model fixed (e.g., exponential moving average), a deviation multiplier (e.g., 2.0), and a short period (e.g., 5) for illustration.
 
 ```python
-from pytechnicalindicators import candle_indicators as ci
+from centaur_technical_indicators import candle_indicators as ci
 
 period = 5
 deviation_multiplier = 2.0
@@ -119,7 +119,7 @@ def choose_best_deviation_model(
     deviation_multiplier: float = 2.0,
     period: int = 5,
 ) -> tuple[str, float]:
-    from pytechnicalindicators import candle_indicators as ci
+    from centaur_technical_indicators import candle_indicators as ci
 
     deviation_models = [
         "standard",  # or "standard_deviation"
