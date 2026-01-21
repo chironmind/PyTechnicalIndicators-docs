@@ -1,4 +1,4 @@
-# Tutorial 3: Advanced Usage of PyTechnicalIndicators
+# Tutorial 3: Advanced Usage of Centaur Technical Indicators
 
 > In this tutorial we go deep on just one indicator: the Relative Strength Index (RSI).  
 > We will systematically compare different `constant_model_type` variants and periods, score their signals, and rank configurations.  
@@ -6,8 +6,8 @@
 
 Series so far:
 
-- [01 - Using PyTechnicalIndicators with pandas](./pandas.md)
-- [02 - Using PyTechnicalIndicators with Plotly](./plotly.md)
+- [01 - Using Centaur Technical Indicators with pandas](./pandas.md)
+- [02 - Using Centaur Technical Indicators with Plotly](./plotly.md)
 - 03 - Systematically Evaluating RSI Variants (this file)
 - [04 - Connecting to an API](./api-connection.md)
 
@@ -50,7 +50,7 @@ We will vary:
 
 ```python
 import pandas as pd
-import pytechnicalindicators as pti
+import centaur_technical_indicators as cti
 
 df = pd.read_csv("prices.csv", parse_dates=["Date"]).sort_values("Date").reset_index(drop=True)
 df = df.dropna(subset=["Open","High","Low","Close"])
@@ -170,7 +170,7 @@ Best model: median (Success Rate: 55.81%)
 
 ## 🧩 Putting It All Together
 
-A runnable example of the full code can be found in [`03_advanced_pytechnicalindicators.py`](https://github.com/chironmind/PyTechnicalIndicators_Tutorials/blob/main/examples/03_advanced_pytechnicalindicators.py)
+A runnable example of the full code can be found in [`03_advanced_centaur_technical_indicators.py`](https://github.com/chironmind/CentaurTechnicalIndicators_Tutorials/blob/main/examples/03_advanced_centaur_technical_indicators.py)
 
 ---
 
