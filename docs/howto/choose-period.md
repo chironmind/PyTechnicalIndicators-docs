@@ -169,7 +169,7 @@ if __name__ == "__main__":
 
 ## 🧪 Output
 
-A runnable sample of the code can be found in [`choose_period.py`](https://github.com/chironmind/Centaur Technical Indicators-How-To-guides/blob/main/examples/choose_period.py)
+A runnable sample of the code can be found in [`choose_period.py`](https://github.com/chironmind/CentaurTechnicalIndicators-How-To-guides/blob/main/examples/choose_period.py)
 
 ```text
 Loaded 251 prices

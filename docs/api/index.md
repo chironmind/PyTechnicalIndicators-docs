@@ -119,16 +119,16 @@ import centaur_technical_indicators as cti
 bb = cti.candle_indicators.bulk.moving_constant_bands(close, period=20, constant_model_type="simple_moving_average", deviation_model="standard_deviation", deviation_multiplier=2)
 
 # Ichimoku Cloud
-ichimoku = pti.candle_indicators.bulk.ichimoku_cloud(highs, lows, closes, conversion_period=9, conversion_period=26, span_b_period=52)
+ichimoku = cti.candle_indicators.bulk.ichimoku_cloud(highs, lows, closes, conversion_period=9, conversion_period=26, span_b_period=52)
 
 # Donchian Channels
-donchian = pti.candle_indicators.bulk.donchian_channels(highs, lows, period=20)
+donchian = cti.candle_indicators.bulk.donchian_channels(highs, lows, period=20)
 
 # Keltner Channels
-keltner = pti.candle_indicators.single.keltner_channels(highs, lows, closes, multiplier=2i, constant_model_type="simple_moving_average", atr_constant_model_type="simple_moving_average")
+keltner = cti.candle_indicators.single.keltner_channels(highs, lows, closes, multiplier=2i, constant_model_type="simple_moving_average", atr_constant_model_type="simple_moving_average")
 
 # Supertrend
-supertrend = pti.candle_indicators.single.supertrend(highs, lows, closes, constant_model_type="simple_moving_average", multiplier=3)
+supertrend = cti.candle_indicators.single.supertrend(highs, lows, closes, constant_model_type="simple_moving_average", multiplier=3)
 ```
 
 ### Chart Trends
@@ -148,7 +148,7 @@ Chart trends detect trend in price charts
 
 ```python
 # Get all peaks within 5 periods of each other within a 10 period window
-peaks = pti.chart_trends.peaks(prices, period=10, closest_neighbor=5)
+peaks = cti.chart_trends.peaks(prices, period=10, closest_neighbor=5)
 
 # Get the trend of valleys over a 5 period window
 valley_trend = valley_trend(prices, period=5)
@@ -166,7 +166,7 @@ Correlation indicators determine the correlation between two assets
 
 ```python
 # Correlation between a and b over the past 5 periods
-corr = pti.correlation_indicators.bulk(prices_asset_a, prices_asset_b, constant_model_type="simple_moving_average", deviation_model="standard_deviation", period=5)
+corr = cti.correlation_indicators.bulk(prices_asset_a, prices_asset_b, constant_model_type="simple_moving_average", deviation_model="standard_deviation", period=5)
 ```
 
 ### Momentum Indicators
@@ -195,20 +195,20 @@ Momentum indicators measure the speed and strength of price movements.
 #### Example Usage
 ```python
 # RSI
-rsi = pti.momentum_indicators.bulk.relative_strength_index(close, constant_model_type="simple_moving_average", period=14)
+rsi = cti.momentum_indicators.bulk.relative_strength_index(close, constant_model_type="simple_moving_average", period=14)
 
 # MACD
-macd = pti.momentum_indicators.bulk.macd_line(close, short_period=12, long_period=26, short_period_model="simple_moving_average", long_period_model="simple_moving_average")
-signal = pti.momentum_indicators.bulk.signal_line(macd, period=9)
+macd = cti.momentum_indicators.bulk.macd_line(close, short_period=12, long_period=26, short_period_model="simple_moving_average", long_period_model="simple_moving_average")
+signal = cti.momentum_indicators.bulk.signal_line(macd, period=9)
 
 # Stochastic
-stoch = pti.momentum_indicators.bulk.stochastic_oscillator(close, period=14)
+stoch = cti.momentum_indicators.bulk.stochastic_oscillator(close, period=14)
 
 # Williams %R
-williams = pti.momentum_indicators.single.williams_r(highs, lows, close)
+williams = cti.momentum_indicators.single.williams_r(highs, lows, close)
 
 # Money Flow Index
-mfi = pti.momentum_indicators.single.money_flow_index(close, volumes)
+mfi = cti.momentum_indicators.single.money_flow_index(close, volumes)
 ```
 
 ### Moving Average
@@ -223,13 +223,13 @@ Calculate various moving averages and the McGinley dynamic.
 #### Example Usage
 ```python
 # Different MAs for the past 5 periods
-simple_ma = pti.moving_average.bulk.moving_average(prices, moving_average_type="simple", period=5)
-smoothed_ma = pti.moving_average.bulk.moving_average(prices, moving_average_type="smoothed", period=5)
-exponential_ma = pti.moving_average.bulk.moving_average(prices, moving_average_type="exponential", period=5)
+simple_ma = cti.moving_average.bulk.moving_average(prices, moving_average_type="simple", period=5)
+smoothed_ma = cti.moving_average.bulk.moving_average(prices, moving_average_type="smoothed", period=5)
+exponential_ma = cti.moving_average.bulk.moving_average(prices, moving_average_type="exponential", period=5)
 
 # McGinley Dynamic
-bulk_mcginley = pti.moving_average.bulk.mcginley_dynamic(prices, previous_mcginley_dynamic=0.0, period=5)
-next_mcginley = pti.moving_average.single.mcginley_dynamic(next_price, previous_mcginley_dynamic=bulk_mcginley[-1], period=5
+bulk_mcginley = cti.moving_average.bulk.mcginley_dynamic(prices, previous_mcginley_dynamic=0.0, period=5)
+next_mcginley = cti.moving_average.single.mcginley_dynamic(next_price, previous_mcginley_dynamic=bulk_mcginley[-1], period=5
 ```
 
 ### Other Indicators
@@ -247,10 +247,10 @@ Indicators that don't fall into a specific category.
 #### Example Usage
 ```python
 # Calculate the Return on an 1000 investment
-roi = pti.other_indicators.bulk.return_on_investment(prices, investment=1000)
+roi = cti.other_indicators.bulk.return_on_investment(prices, investment=1000)
 
 # Calculate the internal bar strengrh for the last bar
-ibs = pti.other_indicators.single.internal_bar_strength(high[-1], low[-1], close[-1]
+ibs = cti.other_indicators.single.internal_bar_strength(high[-1], low[-1], close[-1]
 ```
 
 ### Standard Indicators
@@ -268,9 +268,9 @@ Indicators with the defaults pre set to match they traditionally are.
 
 #### Example Usage
 ```python
-rsi = pti.standard_indicators.bulk.rsi(prices)
+rsi = cti.standard_indicators.bulk.rsi(prices)
 
-macd, signal, hist = pti.standard_indicators.bulk.macd(prices)
+macd, signal, hist = cti.standard_indicators.bulk.macd(prices)
 ```
 
 ### Strength Indicators
@@ -288,11 +288,11 @@ Strength indicators analyze market participation and buying/selling pressure.
 #### Example Usage
 ```python
 # Volume Index Indicators
-pvi = pti.strength_indicators.bulk.positive_volume_index(close, volume, previous_volume_index=0.0)
-nvi = pti.strength_indicators.bulk.negative_volume_index(close, volume, previous_volume_index=0.0)
+pvi = cti.strength_indicators.bulk.positive_volume_index(close, volume, previous_volume_index=0.0)
+nvi = cti.strength_indicators.bulk.negative_volume_index(close, volume, previous_volume_index=0.0)
 
 # Relative Vigor Index
-rvi = pti.strength_indicators.single.relative_vigor_index(open, high, low, close, constant_model_type="simple_moving_average")
+rvi = cti.strength_indicators.single.relative_vigor_index(open, high, low, close, constant_model_type="simple_moving_average")
 ```
 
 ### Trend Indicators
@@ -315,12 +315,12 @@ Trend indicators help identify the direction and strength of market trends.
 #### Example Usage
 ```python
 # Aroon Indicators
-aroon_up = pti.trend_indicators.bulk.aroon_up(highs, period=14)
-aroon_down = pti.trend_indicators.bulk.aroon_down(lows, period=14)
-aroon_oscillator = pti.trend_indicators.bulk.aroon_oscillator(aroon_up, aroon_down)
+aroon_up = cti.trend_indicators.bulk.aroon_up(highs, period=14)
+aroon_down = cti.trend_indicators.bulk.aroon_down(lows, period=14)
+aroon_oscillator = cti.trend_indicators.bulk.aroon_oscillator(aroon_up, aroon_down)
 
 # Parabolic SAR
-psar = pti.trend_indicators.bulk.parabolic_time_price_system(highs, lows, af_start=0.02, af_step=0.02, af_max=0.2, position="long", previous_sar=0)
+psar = cti.trend_indicators.bulk.parabolic_time_price_system(highs, lows, af_start=0.02, af_step=0.02, af_max=0.2, position="long", previous_sar=0)
 ```
 
 ### Volatility Indicators
@@ -335,10 +335,10 @@ Volatility indicators measure market volatility and price range movements.
 #### Example Usage
 ```python
 # Ulcer Index
-ui = pti.volatility_indicators.bulk.ulcer_index(close, period=14)
+ui = cti.volatility_indicators.bulk.ulcer_index(close, period=14)
 
 # Volatility System
-vs = pti.volatility_indicators.bulk.volatility_system(high, low, close, period=14, constant_multiplier=2.0, constant_model_type="simple_moving_average")
+vs = cti.volatility_indicators.bulk.volatility_system(high, low, close, period=14, constant_multiplier=2.0, constant_model_type="simple_moving_average")
 ```
 
 ### Parameter Conventions

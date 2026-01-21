@@ -185,7 +185,7 @@ if __name__ == "__main__":
 
 ## 🧪 Output
 
-A runnable sample of the code can be found in [`choose_constant_model_type.py`](https://github.com/chironmind/Centaur Technical Indicators-How-To-guides/blob/main/examples/choose_constant_model_type.py)
+A runnable sample of the code can be found in [`choose_constant_model_type.py`](https://github.com/chironmind/CentaurTechnicalIndicators-How-To-guides/blob/main/examples/choose_constant_model_type.py)
 
 ```text
 Loaded 251 prices
