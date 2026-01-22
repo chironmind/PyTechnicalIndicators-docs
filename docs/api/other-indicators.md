@@ -39,7 +39,7 @@ List of tuples containing (final investment value, percentage return)
 
 #### Example
 ```python
-from pytechnicalindicators import other_indicators as oi
+from centaur_technical_indicators import other_indicators as oi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -86,7 +86,7 @@ List of True Range values
 
 #### Example
 ```python
-from pytechnicalindicators import other_indicators as oi
+from centaur_technical_indicators import other_indicators as oi
 
 close_prices = [
     99.0, 101.0, 104.0, 102.0, 105.0, 107.0, 106.0, 109.0,
@@ -145,7 +145,7 @@ List of Average True Range values
 
 #### Example
 ```python
-from pytechnicalindicators import other_indicators as oi
+from centaur_technical_indicators import other_indicators as oi
 
 close_prices = [
     99.0, 101.0, 104.0, 102.0, 105.0, 107.0, 106.0, 109.0,
@@ -197,7 +197,7 @@ List of internal bar strength values
 
 #### Example
 ```python
-from pytechnicalindicators import other_indicators as oi
+from centaur_technical_indicators import other_indicators as oi
 
 high_prices = [
     105.0, 107.0, 110.0, 108.0, 111.0, 113.0, 112.0, 115.0,
@@ -254,7 +254,7 @@ List of tuples containing (positivity indicator, signal line)
 
 #### Example
 ```python
-from pytechnicalindicators import other_indicators as oi
+from centaur_technical_indicators import other_indicators as oi
 
 open_prices = [
     98.0, 101.5, 104.5, 102.5, 105.5, 107.5, 106.5, 109.5,
@@ -310,7 +310,7 @@ Tuple of (final investment value, percentage return)
 
 #### Example
 ```python
-from pytechnicalindicators import other_indicators as oi
+from centaur_technical_indicators import other_indicators as oi
 
 roi = oi.single.return_on_investment(
     start_price=100.0,
@@ -347,7 +347,7 @@ True Range value
 
 #### Example
 ```python
-from pytechnicalindicators import other_indicators as oi
+from centaur_technical_indicators import other_indicators as oi
 
 tr = oi.single.true_range(
     close=113.0,
@@ -391,7 +391,7 @@ Average True Range value
 
 #### Example
 ```python
-from pytechnicalindicators import other_indicators as oi
+from centaur_technical_indicators import other_indicators as oi
 
 close_prices = [
     99.0, 101.0, 104.0, 102.0, 105.0, 107.0, 106.0, 109.0,
@@ -442,7 +442,7 @@ Internal bar strength value
 
 #### Example
 ```python
-from pytechnicalindicators import other_indicators as oi
+from centaur_technical_indicators import other_indicators as oi
 
 ibs = oi.single.internal_bar_strength(
     high=119.0,

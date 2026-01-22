@@ -1,12 +1,12 @@
 # Tutorial 4: Connecting to a Market Data API
 
-> Learn how to fetch fresh OHLCV data from a public API, process it into a DataFrame, and analyze it with PyTechnicalIndicators.  
+> Learn how to fetch fresh OHLCV data from a public API, process it into a DataFrame, and analyze it with Centaur Technical Indicators.  
 > This workflow enables automated, up-to-date, and repeatable research pipelines.
 
 Series so far:
 
-- [01 - Using PyTechnicalIndicators with pandas](./pandas.md)
-- [02 - Using PyTechnicalIndicators with Plotly](./plotly.md)
+- [01 - Using Centaur Technical Indicators with pandas](./pandas.md)
+- [02 - Using Centaur Technical Indicators with Plotly](./plotly.md)
 - [03 - Systematically Evaluating RSI Variants](./advanced.md)
 - 04 - Connecting to a Market Data API (this file)
 
@@ -16,7 +16,7 @@ Series so far:
 
 - Fetch OHLCV (Open, High, Low, Close, Volume) data from a free market data API
 - Parse JSON into a pandas DataFrame
-- Clean and align the data for use with PyTechnicalIndicators
+- Clean and align the data for use with Centaur Technical Indicators
 - Run your existing indicator pipeline on fresh data
 
 ---
@@ -26,10 +26,10 @@ Series so far:
 - Python 3.10+
 - pandas
 - requests (for HTTP queries)
-- PyTechnicalIndicators
+- Centaur Technical Indicators
 
 ```bash
-pip install pandas requests pytechnicalindicators
+pip install pandas requests centaur_technical_indicators
 ```
 
 ---
@@ -106,7 +106,7 @@ Use Plotly as shown in [Tutorial 2](plotly.md) to quickly visualize live data wi
 
 ## 🧩 Putting It All Together
 
-A runnable example of the full code can be found in [`04_api_connection`](https://github.com/chironmind/PyTechnicalIndicators_Tutorials/blob/main/examples/04_api_connection.py)
+A runnable example of the full code can be found in [`04_api_connection`](https://github.com/chironmind/CentaurTechnicalIndicators_Tutorials/blob/main/examples/04_api_connection.py)
 
 
 ---

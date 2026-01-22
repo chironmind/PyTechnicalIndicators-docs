@@ -39,7 +39,7 @@ List of Aroon Up values
 
 #### Example
 ```python
-from pytechnicalindicators import trend_indicators as ti
+from centaur_technical_indicators import trend_indicators as ti
 
 highs = [105.0, 107.0, 110.0, 108.0, 111.0, 113.0, 112.0, 115.0, 117.0, 114.0, 116.0, 118.0, 120.0, 117.0, 119.0]
 aroon_up = ti.bulk.aroon_up(highs, period=5)
@@ -70,7 +70,7 @@ List of Aroon Down values
 
 #### Example
 ```python
-from pytechnicalindicators import trend_indicators as ti
+from centaur_technical_indicators import trend_indicators as ti
 
 lows = [95.0, 97.0, 100.0, 98.0, 101.0, 103.0, 102.0, 105.0, 107.0, 104.0, 106.0, 108.0, 110.0, 107.0, 109.0]
 aroon_down = ti.bulk.aroon_down(lows, period=5)
@@ -101,7 +101,7 @@ List of Aroon Oscillator values
 
 #### Example
 ```python
-from pytechnicalindicators import trend_indicators as ti
+from centaur_technical_indicators import trend_indicators as ti
 
 aroon_up = [100.0, 80.0, 60.0, 40.0, 20.0]
 aroon_down = [20.0, 40.0, 60.0, 80.0, 100.0]
@@ -135,7 +135,7 @@ List of Aroon indicator tuples (Aroon Up, Aroon Down, Aroon Oscillator)
 
 #### Example
 ```python
-from pytechnicalindicators import trend_indicators as ti
+from centaur_technical_indicators import trend_indicators as ti
 
 highs = [105.0, 107.0, 110.0, 108.0, 111.0, 113.0, 112.0, 115.0, 117.0, 114.0, 116.0, 118.0, 120.0, 117.0, 119.0]
 lows = [95.0, 97.0, 100.0, 98.0, 101.0, 103.0, 102.0, 105.0, 107.0, 104.0, 106.0, 108.0, 110.0, 107.0, 109.0]
@@ -181,7 +181,7 @@ List of SAR values
 
 #### Example
 ```python
-from pytechnicalindicators import trend_indicators as ti
+from centaur_technical_indicators import trend_indicators as ti
 
 highs = [105.0, 107.0, 110.0, 108.0, 111.0, 113.0, 112.0, 115.0, 117.0, 114.0]
 lows = [95.0, 97.0, 100.0, 98.0, 101.0, 103.0, 102.0, 105.0, 107.0, 104.0]
@@ -229,7 +229,7 @@ List of Directional Movement System tuples (+DI, -DI, ADX, ADXR)
 
 #### Example
 ```python
-from pytechnicalindicators import trend_indicators as ti
+from centaur_technical_indicators import trend_indicators as ti
 
 highs = [105.0, 107.0, 110.0, 108.0, 111.0, 113.0, 112.0, 115.0, 117.0, 114.0]
 lows = [95.0, 97.0, 100.0, 98.0, 101.0, 103.0, 102.0, 105.0, 107.0, 104.0]
@@ -271,7 +271,7 @@ List of VPT values
 
 #### Example
 ```python
-from pytechnicalindicators import trend_indicators as ti
+from centaur_technical_indicators import trend_indicators as ti
 
 prices = [100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0, 112.0, 109.0]
 volumes = [1000, 1200, 1500, 1100, 1300, 1400, 1250, 1600, 1800]
@@ -325,7 +325,7 @@ List of TSI values
 
 #### Example
 ```python
-from pytechnicalindicators import trend_indicators as ti
+from centaur_technical_indicators import trend_indicators as ti
 
 prices = [100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0, 112.0, 109.0]
 
@@ -363,7 +363,7 @@ Aroon Up value
 
 #### Example
 ```python
-from pytechnicalindicators import trend_indicators as ti
+from centaur_technical_indicators import trend_indicators as ti
 
 highs = [105.0, 107.0, 110.0, 108.0, 111.0]
 aroon_up = ti.single.aroon_up(highs)
@@ -392,7 +392,7 @@ Aroon Down value
 
 #### Example
 ```python
-from pytechnicalindicators import trend_indicators as ti
+from centaur_technical_indicators import trend_indicators as ti
 
 lows = [95.0, 97.0, 100.0, 98.0, 101.0]
 aroon_down = ti.single.aroon_down(lows)
@@ -423,7 +423,7 @@ Aroon Oscillator value
 
 #### Example
 ```python
-from pytechnicalindicators import trend_indicators as ti
+from centaur_technical_indicators import trend_indicators as ti
 
 osc = ti.single.aroon_oscillator(80.0, 20.0)
 print(f"Single Aroon Oscillator: {osc}")
@@ -453,7 +453,7 @@ Aroon indicator tuple (Aroon Up, Aroon Down, Aroon Oscillator)
 
 #### Example
 ```python
-from pytechnicalindicators import trend_indicators as ti
+from centaur_technical_indicators import trend_indicators as ti
 
 highs = [105.0, 107.0, 110.0, 108.0, 111.0]
 lows = [95.0, 97.0, 100.0, 98.0, 101.0]
@@ -489,7 +489,7 @@ SAR value
 
 #### Example
 ```python
-from pytechnicalindicators import trend_indicators as ti
+from centaur_technical_indicators import trend_indicators as ti
 
 sar = ti.single.long_parabolic_time_price_system(
     previous_sar=98.0, extreme_point=111.0, af=0.02, low=95.0
@@ -525,7 +525,7 @@ SAR value
 
 #### Example
 ```python
-from pytechnicalindicators import trend_indicators as ti
+from centaur_technical_indicators import trend_indicators as ti
 
 sar = ti.single.short_parabolic_time_price_system(
     previous_sar=112.0, extreme_point=95.0, af=0.02, high=119.0
@@ -561,7 +561,7 @@ VPT value
 
 #### Example
 ```python
-from pytechnicalindicators import trend_indicators as ti
+from centaur_technical_indicators import trend_indicators as ti
 
 vpt = ti.single.volume_price_trend(
     current_price=114.0, previous_price=112.0, current_volume=1500.0, previous_vpt=0.0
@@ -607,7 +607,7 @@ TSI value
 
 #### Example
 ```python
-from pytechnicalindicators import trend_indicators as ti
+from centaur_technical_indicators import trend_indicators as ti
 
 prices = [100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0, 112.0, 109.0]
 tsi = ti.single.true_strength_index(

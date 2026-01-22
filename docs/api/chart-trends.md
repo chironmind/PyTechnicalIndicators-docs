@@ -37,7 +37,7 @@ List of tuples containing (peak value, peak index)
 
 #### Example
 ```python
-from pytechnicalindicators import chart_trends as ct
+from centaur_technical_indicators import chart_trends as ct
 
 prices = [
     100.0, 102.0, 108.0, 106.0, 104.0, 107.0, 112.0, 110.0,
@@ -79,7 +79,7 @@ List of tuples containing (valley value, valley index)
 
 #### Example
 ```python
-from pytechnicalindicators import chart_trends as ct
+from centaur_technical_indicators import chart_trends as ct
 
 prices = [
     100.0, 102.0, 108.0, 106.0, 104.0, 107.0, 112.0, 110.0,
@@ -119,7 +119,7 @@ Tuple containing (slope, intercept) of the peak trend line
 
 #### Example
 ```python
-from pytechnicalindicators import chart_trends as ct
+from centaur_technical_indicators import chart_trends as ct
 
 prices = [
     100.0, 102.0, 108.0, 106.0, 104.0, 107.0, 112.0, 110.0,
@@ -158,7 +158,7 @@ Tuple containing (slope, intercept) of the valley trend line
 
 #### Example
 ```python
-from pytechnicalindicators import chart_trends as ct
+from centaur_technical_indicators import chart_trends as ct
 
 prices = [
     100.0, 102.0, 108.0, 106.0, 104.0, 107.0, 112.0, 110.0,
@@ -195,7 +195,7 @@ Tuple containing (slope, intercept) of the overall trend line
 
 #### Example
 ```python
-from pytechnicalindicators import chart_trends as ct
+from centaur_technical_indicators import chart_trends as ct
 
 prices = [
     100.0, 102.0, 108.0, 106.0, 104.0, 107.0, 112.0, 110.0,
@@ -247,7 +247,7 @@ List of tuples containing (start index, end index, slope, intercept) for each tr
 
 #### Example
 ```python
-from pytechnicalindicators import chart_trends as ct
+from centaur_technical_indicators import chart_trends as ct
 
 prices = [
     100.0, 102.0, 108.0, 106.0, 104.0, 107.0, 112.0, 110.0,

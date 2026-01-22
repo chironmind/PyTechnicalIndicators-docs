@@ -47,7 +47,7 @@ List of tuples (lower envelope, constant model result, upper envelope)
 
 #### Example
 ```python
-from pytechnicalindicators import candle_indicators as ci
+from centaur_technical_indicators import candle_indicators as ci
 
 prices = [
     100.0, 102.0, 103.0, 102.5, 102.8, 103.1, 103.8, 103.9, 
@@ -99,7 +99,7 @@ List of McGinley dynamic envelopes tuple (lower envelope, McGinley dynamic, uppe
 
 #### Example
 ```python
-from pytechnicalindicators import candle_indicators as ci
+from centaur_technical_indicators import candle_indicators as ci
 
 prices = [
     100.0, 102.0, 103.0, 102.5, 102.8, 103.1, 103.8, 103.9,
@@ -166,7 +166,7 @@ List of Moving constant bands tuple (lower band, constant model result, upper ba
 
 #### Example
 ```python
-from pytechnicalindicators import candle_indicators as ci
+from centaur_technical_indicators import candle_indicators as ci
 
 prices = [
     100.0, 102.0, 103.0, 102.5, 102.8, 103.1, 103.8, 103.9,
@@ -230,7 +230,7 @@ List of McGinley dynamic bands tuple (lower band, McGinley dynamic, upper band)
 
 #### Example
 ```python
-from pytechnicalindicators import candle_indicators as ci
+from centaur_technical_indicators import candle_indicators as ci
 
 prices = [
     100.0, 102.0, 103.0, 102.5, 102.8, 103.1, 103.8, 103.9,
@@ -291,7 +291,7 @@ A list of tuples, each tuple contains (leading span a, leading span b, base line
 
 #### Example
 ```python
-from pytechnicalindicators import candle_indicators as ci
+from centaur_technical_indicators import candle_indicators as ci
 
 high_prices = [
     105.0, 103.0, 107.0, 101.0, 103.0, 100.0, 109.0, 105.0,
@@ -346,7 +346,7 @@ List of Donchian channel tuples (lower, average, upper)
 
 #### Example
 ```python
-from pytechnicalindicators import candle_indicators as ci
+from centaur_technical_indicators import candle_indicators as ci
 
 high_prices = [
     105.0, 103.0, 107.0, 101.0, 103.0, 100.0, 109.0, 105.0,
@@ -415,7 +415,7 @@ List of Keltner channel tuples
 
 #### Example
 ```python
-from pytechnicalindicators import candle_indicators as ci
+from centaur_technical_indicators import candle_indicators as ci
 
 high_prices = [
     105.0, 103.0, 107.0, 101.0, 103.0, 100.0, 109.0, 105.0,
@@ -487,7 +487,7 @@ List of Super Trend indicators
 
 #### Example
 ```python
-from pytechnicalindicators import candle_indicators as ci
+from centaur_technical_indicators import candle_indicators as ci
 
 high_prices = [
     105.0, 103.0, 107.0, 101.0, 103.0, 100.0, 109.0, 105.0,
@@ -549,7 +549,7 @@ Moving Constant Envelopes tuples (lower envelope, constant model result, upper e
 
 #### Example
 ```python
-from pytechnicalindicators import candle_indicators as ci
+from centaur_technical_indicators import candle_indicators as ci
 
 prices = [
     100.0, 102.0, 103.0, 102.5, 102.8, 103.1, 103.8, 103.9,
@@ -591,7 +591,7 @@ McGinley dynamic envelopes tuple (lower envelope, McGinley dynamic, upper envelo
 
 #### Example
 ```python
-from pytechnicalindicators import candle_indicators as ci
+from centaur_technical_indicators import candle_indicators as ci
 
 prices = [
     100.0, 102.0, 103.0, 102.5, 102.8, 103.1, 103.8, 103.9,
@@ -645,7 +645,7 @@ Moving constant bands tuple (lower band, constant model result, upper band)
 
 #### Example
 ```python
-from pytechnicalindicators import candle_indicators as ci
+from centaur_technical_indicators import candle_indicators as ci
 
 prices = [
     100.0, 102.0, 103.0, 102.5, 102.8, 103.1, 103.8, 103.9,
@@ -695,7 +695,7 @@ McGinley dynamic bands tuple (lower band, McGinley dynamic, upper band)
 
 #### Example
 ```python
-from pytechnicalindicators import candle_indicators as ci
+from centaur_technical_indicators import candle_indicators as ci
 
 prices = [
     100.0, 102.0, 103.0, 102.5, 102.8, 103.1, 103.8, 103.9,
@@ -744,7 +744,7 @@ ichimoku_cloud(
 
 #### Example
 ```python
-from pytechnicalindicators import candle_indicators as ci
+from centaur_technical_indicators import candle_indicators as ci
 
 high_prices = [
     105.0, 103.0, 107.0, 101.0, 103.0, 100.0, 109.0, 105.0,
@@ -795,7 +795,7 @@ Donchian channel tuple (lower, average, upper)
 
 #### Example
 ```python
-from pytechnicalindicators import candle_indicators as ci
+from centaur_technical_indicators import candle_indicators as ci
 
 high_prices = [
     105.0, 103.0, 107.0, 101.0, 103.0, 100.0, 109.0, 105.0,
@@ -856,7 +856,7 @@ Keltner channel tuple
 
 #### Example
 ```python
-from pytechnicalindicators import candle_indicators as ci
+from centaur_technical_indicators import candle_indicators as ci
 
 high_prices = [
     105.0, 103.0, 107.0, 101.0, 103.0, 100.0, 109.0, 105.0,
@@ -918,7 +918,7 @@ List of Super Trend indicators
 
 #### Example
 ```python
-from pytechnicalindicators import candle_indicators as ci
+from centaur_technical_indicators import candle_indicators as ci
 
 high_prices = [
     105.0, 103.0, 107.0, 101.0, 103.0, 100.0, 109.0, 105.0,

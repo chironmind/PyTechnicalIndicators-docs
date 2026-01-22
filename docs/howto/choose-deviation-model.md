@@ -1,6 +1,6 @@
-# How to determine the best `deviation_model` for a PyTechnicalIndicators function
+# How to determine the best `deviation_model` for a Centaur Technical Indicators function
 
-This guide shows how to programmatically determine the best `deviation_model` for your indicator using the Python package PyTechnicalIndicators.
+This guide shows how to programmatically determine the best `deviation_model` for your indicator using the Python package Centaur Technical Indicators.
 
 The rating model is overly simplified and should be refined to suit your needs before usage.
 
@@ -16,10 +16,10 @@ The rating model is overly simplified and should be refined to suit your needs b
 
 ## 📦 Requirements
 
-Install PyTechnicalIndicators:
+Install Centaur Technical Indicators:
 
 ```bash
-pip install pytechnicalindicators
+pip install centaur_technical_indicators
 ```
 
 ---
@@ -83,7 +83,7 @@ The default deviation model is the standard deviation; however other models may 
 We’ll test several deviation models while keeping the constant model fixed (e.g., exponential moving average), a deviation multiplier (e.g., 2.0), and a short period (e.g., 5) for illustration.
 
 ```python
-from pytechnicalindicators import candle_indicators as ci
+from centaur_technical_indicators import candle_indicators as ci
 
 period = 5
 deviation_multiplier = 2.0
@@ -119,7 +119,7 @@ def choose_best_deviation_model(
     deviation_multiplier: float = 2.0,
     period: int = 5,
 ) -> tuple[str, float]:
-    from pytechnicalindicators import candle_indicators as ci
+    from centaur_technical_indicators import candle_indicators as ci
 
     deviation_models = [
         "standard",  # or "standard_deviation"
@@ -206,7 +206,7 @@ if __name__ == "__main__":
 
 ## 🧪 Output
 
-A runnable sample of the code can be found in [`choose_deviation_model.py`](https://github.com/chironmind/PyTechnicalIndicators-How-To-guides/blob/main/examples/choose_deviation_model.py)
+A runnable sample of the code can be found in [`choose_deviation_model.py`](https://github.com/chironmind/CentaurTechnicalIndicators-How-To-guides/blob/main/examples/choose_deviation_model.py)
 
 ```text
 Loaded 251 prices

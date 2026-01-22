@@ -30,7 +30,7 @@ List of Ulcer Index values (one per window)
 
 #### Example
 ```python
-from pytechnicalindicators import volatility_indicators as vi
+from centaur_technical_indicators import volatility_indicators as vi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0, 
@@ -84,7 +84,7 @@ List of volatility system SaR points
 
 #### Example
 ```python
-from pytechnicalindicators import volatility_indicators as vi
+from centaur_technical_indicators import volatility_indicators as vi
 
 high = [105.0, 107.0, 110.0, 108.0, 111.0, 113.0, 112.0, 115.0, 117.0, 114.0, 116.0, 118.0, 120.0, 117.0, 119.0]
 low = [95.0, 97.0, 100.0, 98.0, 101.0, 103.0, 102.0, 105.0, 107.0, 104.0, 106.0, 108.0, 110.0, 107.0, 109.0]
@@ -126,7 +126,7 @@ Ulcer Index value
 
 #### Example
 ```python
-from pytechnicalindicators import volatility_indicators as vi
+from centaur_technical_indicators import volatility_indicators as vi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0, 

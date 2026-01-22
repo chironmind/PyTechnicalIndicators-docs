@@ -1,6 +1,6 @@
-# How to use McGinley Dynamic in PyTechnicalIndicators
+# How to use McGinley Dynamic in Centaur Technical Indicators
 
-This guide shows how to use the McGinley Dynamic bands with the Python package PyTechnicalIndicators.  
+This guide shows how to use the McGinley Dynamic bands with the Python package Centaur Technical Indicators.  
 The same logic can be applied to other McGinley Dynamic functions.
 
 ---
@@ -15,10 +15,10 @@ The same logic can be applied to other McGinley Dynamic functions.
 
 ## 📦 Requirements
 
-Install PyTechnicalIndicators:
+Install Centaur Technical Indicators:
 
 ```bash
-pip install pytechnicalindicators
+pip install centaur_technical_indicators
 ```
 
 ---
@@ -81,7 +81,7 @@ The McGinley Dynamic uses a previously calculated value.
 If no previous McGinley Dynamic is available, use 0.0 for the first computation.
 
 ```python
-from pytechnicalindicators import candle_indicators as ci
+from centaur_technical_indicators import candle_indicators as ci
 
 # Example setup
 period = 5
@@ -134,7 +134,7 @@ print(f"Lower band {lower}, McGinley dynamic {mid}, upper band {upper}")
 
 ## 🧪 Output
 
-A runnable sample of the code can be found in [`mcginley_dynamic.py`](https://github.com/chironmind/PyTechnicalIndicators-How-To-guides/blob/main/examples/mcginley_dynamic.py)
+A runnable sample of the code can be found in [`mcginley_dynamic.py`](https://github.com/chironmind/CentaurTechnicalIndicators-How-To-guides/blob/main/examples/mcginley_dynamic.py)
 
 ```text
 Loaded 251 prices

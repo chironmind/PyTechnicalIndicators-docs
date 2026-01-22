@@ -4,9 +4,9 @@
 
 This tutorial is the second in the series:
 
-- [01 - Using PyTechnicalIndicators with pandas](./pandas.md)
-- 02 - Using PyTechnicalIndicators with Plotly
-- [03 - More advanced use cases for PyTechnicalIndicators](./advanced.md)
+- [01 - Using Centaur Technical Indicators with pandas](./pandas.md)
+- 02 - Using Centaur Technical Indicators with Plotly
+- [03 - More advanced use cases for Centaur Technical Indicators](./advanced.md)
 - [04 - Connecting to an API](./api-connection.md)
 
 ---
@@ -49,7 +49,7 @@ If you already followed Tutorial 1 and have a DataFrame with:
 - `RSI`
 - `ATR_20`
 
-Otherwise, copy the code from [tutorial 1](https://github.com/chironmind/PyTechnicalIndicators_Tutorials/blob/main/examples/01_using_pandas_and_pytechnicalindicators.py)
+Otherwise, copy the code from [tutorial 1](https://github.com/chironmind/CentaurTechnicalIndicators_Tutorials/blob/main/examples/01_using_pandas_and_centaur_technical_indicators.py)
 
 ---
 
@@ -251,10 +251,10 @@ Ideas you can try before the next tutorial:
 
 ## 🧩 Putting It All Together
 
-A runnable example of the full code can be found in [`02_using_plotly_and_pytechnicalindicators.py`](https://github.com/chironmind/PyTechnicalIndicators_Tutorials/blob/main/examples/02_using_plotly_and_pytechnicalindicators.py)
+A runnable example of the full code can be found in [`02_using_plotly_and_centaur_technical_indicators.py`](https://github.com/chironmind/CentaurTechnicalIndicators_Tutorials/blob/main/examples/02_using_plotly_and_centaur_technical_indicators.py)
 
 ```bash
-python3 examples/02_using_plotly_and_pytechnicalindicators.py
+python3 examples/02_using_plotly_and_centaur_technical_indicators.py
 ```
 **Output:**
 
@@ -271,7 +271,7 @@ Educational example only. Not financial advice. Validate indicator logic before 
 ## ✅ Next Step
 
 Continue to:
-[03 - More advanced use cases for PyTechnicalIndicators](./advanced.md)
+[03 - More advanced use cases for Centaur Technical Indicators](./advanced.md)
 
 In the next tutorial we will iterate programmatically over indicator modules, auto-generate features, and discuss batch computations.
 

@@ -46,7 +46,7 @@ List of Relative Strength Index values
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -90,7 +90,7 @@ List of Stochastic Oscillator values
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -136,7 +136,7 @@ List of Slow Stochastic values
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 stochastics = [
     80.0, 75.0, 70.0, 72.0, 68.0, 65.0, 70.0, 73.0,
@@ -183,7 +183,7 @@ List of Slowest Stochastic values
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 slow_stochastics = [
     73.0, 70.0, 69.0, 69.6, 70.2, 72.2, 75.2, 76.6, 76.8, 77.0, 77.2
@@ -226,7 +226,7 @@ List of Williams %R values
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 high_prices = [
     105.0, 107.0, 110.0, 108.0, 111.0, 113.0, 112.0, 115.0,
@@ -280,7 +280,7 @@ List of Money Flow Index values
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -326,7 +326,7 @@ List of Rate of Change values
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -369,7 +369,7 @@ List of On Balance Volume values
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -432,7 +432,7 @@ List of Commodity Channel Index values
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -489,7 +489,7 @@ List of tuples with (Commodity Channel Index, McGinley Dynamic)
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -553,7 +553,7 @@ List of MACD line values
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -605,7 +605,7 @@ List of Signal line values
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 macds = [
     -0.5, -0.3, 0.1, 0.4, 0.2, 0.6, 0.8, 0.5,
@@ -654,7 +654,7 @@ List of tuples with (MACD, short McGinley dynamic, long McGinley dynamic)
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -726,7 +726,7 @@ List of tuples with (Chaikin Oscillator, Accumulation Distribution)
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 high_prices = [
     105.0, 107.0, 110.0, 108.0, 111.0, 113.0, 112.0, 115.0,
@@ -793,7 +793,7 @@ List of Percentage Price Oscillator values
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -837,7 +837,7 @@ List of Chande Momentum Oscillator values
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -883,7 +883,7 @@ Relative Strength Index value
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -920,7 +920,7 @@ Stochastic Oscillator value
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -961,7 +961,7 @@ Slow Stochastic value
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 stochastics = [
     80.0, 75.0, 70.0, 72.0, 68.0, 65.0, 70.0, 73.0,
@@ -1005,7 +1005,7 @@ Slowest Stochastic value
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 slow_stochastics = [
     75.0, 72.3, 71.7, 68.3, 67.7, 69.0, 72.7, 75.3,
@@ -1046,7 +1046,7 @@ Williams %R value
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 high_prices = [
     105.0, 107.0, 110.0, 108.0, 111.0, 113.0, 112.0, 115.0,
@@ -1090,7 +1090,7 @@ Money Flow Index value
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -1130,7 +1130,7 @@ Rate of Change value
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 roc = mi.single.rate_of_change(
     current_price=114.0,
@@ -1168,7 +1168,7 @@ On Balance Volume value
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 obv = mi.single.on_balance_volume(
     current_price=114.0,
@@ -1218,7 +1218,7 @@ Commodity Channel Index value
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -1268,7 +1268,7 @@ Tuple with (Commodity Channel Index, McGinley Dynamic)
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -1323,7 +1323,7 @@ MACD line value
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -1369,7 +1369,7 @@ Signal line value
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 macds = [
     -0.5, -0.3, 0.1, 0.4, 0.2, 0.6, 0.8, 0.5,
@@ -1412,7 +1412,7 @@ Tuple with (MACD, short McGinley dynamic, long McGinley dynamic)
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -1475,7 +1475,7 @@ Tuple with (Chaikin Oscillator, Accumulation Distribution)
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 high_prices = [
     105.0, 107.0, 110.0, 108.0, 111.0, 113.0, 112.0, 115.0,
@@ -1539,7 +1539,7 @@ Percentage Price Oscillator value
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -1577,7 +1577,7 @@ Chande Momentum Oscillator value
 
 #### Example
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 prices = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,

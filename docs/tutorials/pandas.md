@@ -1,12 +1,12 @@
-# Tutorial 1: Using PyTechnicalIndicators with pandas
+# Tutorial 1: Using Centaur Technical Indicators with pandas
 
 > Leverage Rust-powered speed inside familiar pandas workflows.
 
 This tutorial is the first in a series of tutorials:
 
-- 01 - Using PyTechnicalIndicators with pandas
-- [02 - Using PyTechnicalIndicators with Plotly](./plotly.md)
-- [03 - More advanced use cases for PyTechnicalIndicators](./advanced.md)
+- 01 - Using Centaur Technical Indicators with pandas
+- [02 - Using Centaur Technical Indicators with Plotly](./plotly.md)
+- [03 - More advanced use cases for Centaur Technical Indicators](./advanced.md)
 - [04 - Connecting to an API](./api-connection.md)
 
 ---
@@ -15,7 +15,7 @@ This tutorial is the first in a series of tutorials:
 
 In this tutorial you will learn how to:
 
-- Install and import `pytechnicalindicators`
+- Install and import `centaur_technical_indicators`
 - Load OHLCV price data into a pandas `DataFrame`
 - Convert columns to the list inputs expected by the library
 - Call both `single` (scalar) and `bulk` (rolling / series) indicator functions
@@ -41,10 +41,10 @@ source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install pandas
 ```
 
-Install PyTechnicalIndicators (assuming published wheel / build locally):
+Install Centaur Technical Indicators (assuming published wheel / build locally):
 
 ```bash
-pip install pytechnicalindicators
+pip install centaur_technical_indicators
 # OR (from source after cloning)
 # pip install maturin
 # maturin develop
@@ -73,7 +73,7 @@ Each module has two namespaces:
 
 Example:
 ```python
-from pytechnicalindicators import standard_indicators
+from centaur_technical_indicators import standard_indicators
 
 standard_indicators.single.simple_moving_average(prices)
 standard_indicators.bulk.simple_moving_average(prices, period=20)
@@ -113,7 +113,7 @@ open_ = df["Open"].astype(float).tolist()
 
 ### Single (all data as one window)
 ```python
-from pytechnicalindicators import import moving_average as ma
+from centaur_technical_indicators import moving_average as ma
 
 sma_all = ma.single.moving_average(close, moving_average_type="simple")
 print("Full-series SMA:", sma_all)
@@ -193,7 +193,7 @@ Valid constant model strings (case-insensitive aliases):
 (Full forms also accepted: `simple_moving_average`, `smoothed_moving_average`, etc.)
 
 ```python
-from pytechnicalindicators import other_indicators
+from centaur_technical_indicators import other_indicators
 
 model = "exponential_moving_average"
 period = 14
@@ -266,10 +266,10 @@ Consult the project [API reference](../api/index.md) for model-specific effects:
 
 ## 🧩 Putting It All Together
 
-A runnable example of the full code can be found in [`01_using_pandas_and_pytechnicalindicators.py`](https://github.com/chironmind/PyTechnicalIndicators_Tutorials/blob/main/examples/01_using_pandas_and_pytechnicalindicators.py)
+A runnable example of the full code can be found in [`01_using_pandas_and_centaur_technical_indicators.py`](https://github.com/chironmind/CentaurTechnicalIndicators_Tutorials/blob/main/examples/01_using_pandas_and_centaur_technical_indicators.py)
 
 ```shell
-python3 01_using_pandas_and_pytechnicalindicators.py
+python3 01_using_pandas_and_centaur_technical_indicators.py
 ```
 
 **Output:**
@@ -313,7 +313,7 @@ Educational example only. Not financial advice. Validate results independently b
 
 ## ✅ Next Step
 
-You now know how to integrate PyTechnicalIndicators into a pandas workflow and engineer feature columns efficiently.
+You now know how to integrate Centaur Technical Indicators into a pandas workflow and engineer feature columns efficiently.
 
 Next discover how to integrate [Plotly charts](./plotly.md)
 

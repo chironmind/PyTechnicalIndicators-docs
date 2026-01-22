@@ -1,6 +1,6 @@
-# How to determine the best period for a PyTechnicalIndicators function
+# How to determine the best period for a Centaur Technical Indicators function
 
-This guide shows how to programmatically determine the best period for your indicator using the Python package PyTechnicalIndicators.
+This guide shows how to programmatically determine the best period for your indicator using the Python package Centaur Technical Indicators.
 
 The rating model is overly simplified and should be refined to suit your needs before usage.
 
@@ -16,10 +16,10 @@ The rating model is overly simplified and should be refined to suit your needs b
 
 ## 📦 Requirements
 
-Install PyTechnicalIndicators:
+Install Centaur Technical Indicators:
 
 ```bash
-pip install pytechnicalindicators
+pip install centaur_technical_indicators
 ```
 
 ---
@@ -81,7 +81,7 @@ def load_prices_from_csv(path: str) -> list[float]:
 The default RSI period is 14. We’ll iterate from 2 to 15 to see if a different period performs better (excluding 1 to avoid degenerate windows).
 
 ```python
-from pytechnicalindicators import momentum_indicators as mi
+from centaur_technical_indicators import momentum_indicators as mi
 
 model = "smoothed_moving_average"  # default for RSI
 # Example:
@@ -101,7 +101,7 @@ Note: For period p, rsi[0] corresponds to prices index i = p (0-based). We’ll 
 
 ```python
 def choose_best_rsi_period(prices: list[float], min_p: int = 2, max_p: int = 15) -> tuple[int, float]:
-    from pytechnicalindicators import momentum_indicators as mi
+    from centaur_technical_indicators import momentum_indicators as mi
 
     best_rating = -1.0
     best_period = min_p
@@ -169,7 +169,7 @@ if __name__ == "__main__":
 
 ## 🧪 Output
 
-A runnable sample of the code can be found in [`choose_period.py`](https://github.com/chironmind/PyTechnicalIndicators-How-To-guides/blob/main/examples/choose_period.py)
+A runnable sample of the code can be found in [`choose_period.py`](https://github.com/chironmind/CentaurTechnicalIndicators-How-To-guides/blob/main/examples/choose_period.py)
 
 ```text
 Loaded 251 prices

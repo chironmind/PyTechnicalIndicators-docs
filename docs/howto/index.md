@@ -1,6 +1,6 @@
 # How-To Guides
 
-Practical, step-by-step guides for using PyTechnicalIndicators and optimizing your indicator workflows.
+Practical, step-by-step guides for using Centaur Technical Indicators and optimizing your indicator workflows.
 
 ## Guides
 

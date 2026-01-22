@@ -55,7 +55,7 @@ List of correlations for each period
 
 #### Example
 ```python
-from pytechnicalindicators import correlation_indicators as ci
+from centaur_technical_indicators import correlation_indicators as ci
 
 prices_asset_a = [
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
@@ -123,7 +123,7 @@ Correlation between the two asset price series
 
 #### Example
 ```python
-from pytechnicalindicators import correlation_indicators as ci
+from centaur_technical_indicators import correlation_indicators as ci
 
 prices_asset_a = [ 
     100.0, 102.0, 105.0, 103.0, 106.0, 108.0, 107.0, 110.0,
