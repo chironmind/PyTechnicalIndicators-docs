@@ -1,4 +1,4 @@
-# CentaurTechnicalIndicators-docs
+# CentaurTechnicalIndicators-Python-Docs
 
 This repository contains the documentation for the [CentaurTechnicalIndicators](https://github.com/chironmind/CentaurTechnicalIndicators-Python) project.
 
