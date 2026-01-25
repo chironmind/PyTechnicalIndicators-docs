@@ -28,6 +28,19 @@ nav:
     - Choose Deviation Model: howto/choose-deviation-model.md
     - Choose Period: howto/choose-period.md
     - McGinley Dynamic Bands: howto/mcginley-dynamic.md
+  - Examples:
+    - Overview: examples/index.md
+    - Tutorial Examples:
+      - Using Pandas: examples/tutorial_pandas.md
+      - Visualizing with Plotly: examples/tutorial_plotly.md
+      - API Connection: examples/tutorial_api_connection.md
+      - Advanced RSI Evaluation: examples/tutorial_advanced.md
+    - How-To Examples:
+      - McGinley Dynamic: examples/howto_mcginley_dynamic.md
+      - Choose Deviation Model: examples/howto_choose_deviation_model.md
+      - Choose Period: examples/howto_choose_period.md
+      - Choose Constant Model Type: examples/howto_choose_constant_model_type.md
+      - Bulk vs Single: examples/howto_bulk_vs_single.md
   - Benchmarks: 
     - Overview: benchmarks/index.md
     - Candle Indicators: 
