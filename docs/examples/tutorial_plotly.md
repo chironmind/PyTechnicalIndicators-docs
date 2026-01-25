@@ -104,7 +104,7 @@ if sma_col in df.columns:
     )
 
 # --- Row 1: Moving Constant Bands (shaded) ---
-if {"MCB_Lower","MCB_Upper","MCB_EMA"}.issubset(df.columns):
+if {"MCB_Lower", "MCB_Upper", "MCB_EMA"}.issubset(df.columns):
     fig.add_trace(
         go.Scatter(
             x=df["Date"], y=df["MCB_Upper"],
