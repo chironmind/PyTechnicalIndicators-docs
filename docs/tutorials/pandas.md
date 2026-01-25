@@ -56,7 +56,6 @@ pip install centaur_technical_indicators
 
 Modules are grouped by analysis area:
 
-- `standard_indicators`
 - `momentum_indicators`
 - `trend_indicators`
 - `strength_indicators`
@@ -73,19 +72,24 @@ Each module has two namespaces:
 
 Example:
 ```python
-from centaur_technical_indicators import standard_indicators
+from centaur_technical_indicators import moving_average
 
-standard_indicators.single.simple_moving_average(prices)
-standard_indicators.bulk.simple_moving_average(prices, period=20)
+prices = [1234, 1278, 1295, ... , 1300]
+moving_average.single.moving_average(prices, moving_average_type="simple")
+moving_average.bulk.moving_average(prices, moving_average_type="simple", period=20)
 ```
 
 ---
 
 ## 📥 Getting Some Data 
 
-If you already have a CSV point to your CSV, we will be using `examples/prices.csv` for our tutorials:
+If you already have a CSV point to your CSV, we will be using `prices.csv` for our tutorials.
+
+You can find a copyable sample `prices.csv` file [here](../examples/index.md).
 
 ```python
+import pandas as pd 
+
 df = pd.read_csv("prices.csv", parse_dates=["Date"])
 df = df.sort_values("Date").reset_index(drop=True)
 ```
@@ -103,7 +107,7 @@ low   = df["Low"].astype(float).tolist()
 open_ = df["Open"].astype(float).tolist()
 ```
 
-(You can keep naming consistent; `open_` avoids shadowing Python's built-in `open`.)
+> You can keep naming consistent; `open_` avoids shadowing Python's built-in `open`
 
 ---
 
@@ -138,13 +142,13 @@ Tip: The first `(period - 1)` rows have no value because a full window was not y
 `single` version returns a tuple `(lower, middle, upper)`; `bulk` returns a list of such tuples.
 
 ```python
-lower, middle, upper = ci.single.moving_constant_bands(
+lower, ema, upper = ci.single.moving_constant_bands(
         close[-20:],
         constant_model_type="exponential_moving_average",
         deviation_model="standard_deviation",
         deviation_multiplier=2.0,
 )
-print(lower, middle, upper)
+print(f"lower band: {lower}, EMA: {ema}, upper band: {upper}")
 ```
 
 Bulk usage:
@@ -159,10 +163,10 @@ bands = ci.bulk.moving_constant_bands(
 )
 
 # Unpack and assign (align to tail)
-lower_vals, mid_vals, upper_vals = zip(*bands)
+lower_vals, ema_vals, upper_vals = zip(*bands)
 tail_index = df.index[-len(bands):]
 df.loc[tail_index, "MCB_Lower"] = lower_vals
-df.loc[tail_index, "MCB_EMA"] = mid_vals
+df.loc[tail_index, "MCB_EMA"] = ema_vals
 df.loc[tail_index, "MCB_Upper"] = upper_vals
 ```
 
@@ -266,23 +270,9 @@ Consult the project [API reference](../api/index.md) for model-specific effects:
 
 ## 🧩 Putting It All Together
 
-A runnable example of the full code can be found in [`01_using_pandas_and_centaur_technical_indicators.py`](https://github.com/chironmind/CentaurTechnicalIndicators_Tutorials/blob/main/examples/01_using_pandas_and_centaur_technical_indicators.py)
+A runnable example of the full code can be found [here](../examples/tutorial_pandas.md)
 
-```shell
-python3 01_using_pandas_and_centaur_technical_indicators.py
-```
 
-**Output:**
-```shell
-Full-series SMA: 5624.867410358566
-5367.04826935573 5755.587345685254 6144.126422014779
-          Date     Open     High      Low    Close     SMA_20     BB_Lower    BB_Middle     BB_Upper        RSI   ATR_20
-246 2025-03-10  5705.37  5705.37  5564.02  5614.56  5956.2700  5579.906354  5877.649008  6175.391662  33.281207  84.9520
-247 2025-03-11  5603.65  5636.30  5528.41  5572.07  5931.5515  5504.588851  5841.191158  6177.793465  36.744063  88.9195
-248 2025-03-12  5624.84  5642.19  5546.09  5599.30  5908.0915  5451.413841  5811.173289  6170.932737  33.949163  92.0275
-249 2025-03-13  5594.45  5597.78  5504.65  5521.52  5881.5690  5385.361698  5775.695387  6166.029075  33.043555  93.6840
-250 2025-03-14  5563.85  5645.27  5563.85  5638.94  5857.7625  5367.048269  5755.587346  6144.126422  39.573869  94.4570
-```
 
 ---
 

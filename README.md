@@ -1,9 +1,9 @@
 # CentaurTechnicalIndicators-Python-Docs
 
-This repository contains the documentation for the [CentaurTechnicalIndicators](https://github.com/chironmind/CentaurTechnicalIndicators-Python) project.
+This repository contains the documentation for the [CentaurTechnicalIndicators-Python](https://github.com/chironmind/CentaurTechnicalIndicators-Python) project.
 
 - **Read the docs online:** [centaurtechnicalindicators-docs.readthedocs.io](https://centaurtechnicalindicators-docs.readthedocs.io/en/latest/)
-- **GitHub Pages:** [chironmind.github.io/CentaurTechnicalIndicators-docs](https://chironmind.github.io/CentaurTechnicalIndicators-docs/)
+- **GitHub Pages:** [chironmind.github.io/CentaurTechnicalIndicators-Python-Docs](https://chironmind.github.io/CentaurTechnicalIndicators-Python-Docs/)
 
 ## Building Docs Locally
 

@@ -1,5 +1,3 @@
-![Centaur Technical Indicators Banner](assets/pytechnicalindicators_banner.png)
-
 # Centaur Technical Indicators
 
 **Fast, configurable technical indicators for Python — powered by Rust.**
@@ -62,13 +60,7 @@ Centaur Technical Indicators covers:
 - [How-To Guides](howto/index.md) — Task-focused, practical recipes
 - [API Reference](api/index.md) — Full indicator and function docs
 - [Benchmarks](benchmarks/index.md) — Performance tables by indicator and dataset size
-- [Source code](https://github.com/chironmind/PyTechnicalIndicators) — Where the magic happens
-
----
-
-## 🗂️ Source Code
-
-Find Centaur Technical Indicators source code on [GitHub](https://github.com/chironmind/CentaurTechnicalIndicators-Python).
+- [Source code](https://github.com/chironmind/CentaurTechnicalIndicators-Python) — Where the magic happens
 
 ---
 
