@@ -92,7 +92,7 @@ fig.add_trace(
 
 # --- Row 1: SMA ---
 sma_col = "SMA_20"
-if sma_col in df:
+if sma_col in df.columns:
     fig.add_trace(
         go.Scatter(
             x=df["Date"], y=df[sma_col],
@@ -139,7 +139,7 @@ if {"MCB_Lower","MCB_Upper","MCB_EMA"}.issubset(df.columns):
     )
 
 # --- Row 2: RSI ---
-if "RSI" in df:
+if "RSI" in df.columns:
     fig.add_trace(
         go.Scatter(
             x=df["Date"], y=df["RSI"],
@@ -155,7 +155,7 @@ if "RSI" in df:
 
 # --- Row 3: ATR ---
 atr_col = "ATR_20"
-if atr_col in df:
+if atr_col in df.columns:
     fig.add_trace(
         go.Bar(
             x=df["Date"], y=df[atr_col],
