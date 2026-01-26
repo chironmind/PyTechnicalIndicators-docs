@@ -87,10 +87,3 @@ RSI Model Ratings (RSI < 30, period=5):
 
 Best model: simple_moving_median (Success Rate: 55.81%)
 ```
-
-## Interpretation
-
-- The `simple_moving_median` model with period 5 gives the best "next bar up" prediction when RSI indicates oversold conditions
-- Out of 43 oversold signals, 24 were correct (55.81% success rate)
-- Different constant model types produce different signal counts and success rates
-- This is a toy metric for educational purposes - real research requires out-of-sample testing

@@ -183,14 +183,9 @@ if __name__ == "__main__":
 
 ---
 
-## 🧪 Output
+## 🧩 Putting It All Together
 
-A runnable sample of the code can be found in [`choose_constant_model_type.py`](https://github.com/chironmind/CentaurTechnicalIndicators-How-To-guides/blob/main/examples/choose_constant_model_type.py)
-
-```text
-Loaded 251 prices
-Best model for RSI is simple_moving_average with a rating of 0.5625
-```
+A full runnable example of the code can be found in the [choose constant model example](../examples/howto_choose_constant_model_type.md).
 
 ---
 

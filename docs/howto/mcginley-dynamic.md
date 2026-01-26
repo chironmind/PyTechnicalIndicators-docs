@@ -132,15 +132,9 @@ print(f"Lower band {lower}, McGinley dynamic {mid}, upper band {upper}")
 
 ---
 
-## 🧪 Output
+## 🧩 Putting It All Together
 
-A runnable sample of the code can be found in [`mcginley_dynamic.py`](https://github.com/chironmind/CentaurTechnicalIndicators-How-To-guides/blob/main/examples/mcginley_dynamic.py)
-
-```text
-Loaded 251 prices
-Length of bands 247
-Lower band 5551.313227907162, McGinley dynamic 5665.614575300795, upper band 5779.9159226944275
-```
+A full runnable example of the code can be found in the [McGinley dynamic example](../examples/howto_mcginley_dynamic.md).
 
 ---
 

@@ -1,7 +1,7 @@
 # Connecting to a Market Data API example
 
-A full example of fetching OHLCV data from the Binance API and applying Centaur Technical Indicators
-from [the tutorial](../tutorials/api-connection.md).
+A full example of fetching OHLCV data from the Binance API from [the tutorial](../tutorials/api-connection.md), applying the Technical Indicators
+from [tutorial 1](../tutorials/pandas.md).
 
 ## Full code
 

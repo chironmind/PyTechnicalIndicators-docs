@@ -63,10 +63,3 @@ Summary:
 - Use bulk when: calculating many historical values, initial setup, backtesting
 - Use single when: real-time updates, streaming data, memory constraints
 ```
-
-## Key takeaways
-
-- **Bulk functions** return a list of values (one for each window in the data)
-- **Single functions** return a single value (for the current window)
-- Use bulk for historical analysis and backtesting
-- Use single for real-time streaming data updates

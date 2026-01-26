@@ -11,7 +11,6 @@ nav:
     - Momentum Indicators: api/momentum-indicators.md
     - Moving Average: api/moving-average.md
     - Other Indicators: api/other-indicators.md
-    - Standard Indicators: api/standard-indicators.md
     - Strength Indicators: api/strength-indicators.md
     - Trend Indicators: api/trend-indicators.md
     - Volatility Indicators: api/volatility-indicators.md
@@ -33,14 +32,14 @@ nav:
     - Tutorial Examples:
       - Using Pandas: examples/tutorial_pandas.md
       - Visualizing with Plotly: examples/tutorial_plotly.md
-      - API Connection: examples/tutorial_api_connection.md
       - Advanced RSI Evaluation: examples/tutorial_advanced.md
+      - API Connection: examples/tutorial_api_connection.md
     - How-To Examples:
-      - McGinley Dynamic: examples/howto_mcginley_dynamic.md
+      - Bulk vs Single: examples/howto_bulk_vs_single.md
+      - Choose Constant Model Type: examples/howto_choose_constant_model_type.md
       - Choose Deviation Model: examples/howto_choose_deviation_model.md
       - Choose Period: examples/howto_choose_period.md
-      - Choose Constant Model Type: examples/howto_choose_constant_model_type.md
-      - Bulk vs Single: examples/howto_bulk_vs_single.md
+      - McGinley Dynamic: examples/howto_mcginley_dynamic.md
   - Benchmarks: 
     - Overview: benchmarks/index.md
     - Candle Indicators: 

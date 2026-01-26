@@ -169,7 +169,7 @@ def choose_best_deviation_model(
     return best_model, best_rating
 ```
 
-### 4. Full example
+### 4. Calling from `main`
 
 ```python
 import sys
@@ -204,14 +204,10 @@ if __name__ == "__main__":
 
 ---
 
-## 🧪 Output
+## 🧩 Putting It All Together
 
-A runnable sample of the code can be found in [`choose_deviation_model.py`](https://github.com/chironmind/CentaurTechnicalIndicators-How-To-guides/blob/main/examples/choose_deviation_model.py)
+A full runnable example of the code can be found in the  [choose deviation model example](../examples/howto_choose_deviation_model.md).
 
-```text
-Loaded 251 prices
-Best model for moving constant bands is median with a rating of 0.6666666666666666
-```
 
 ---
 

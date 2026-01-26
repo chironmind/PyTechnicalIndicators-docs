@@ -94,14 +94,9 @@ Notes:
 
 ---
 
-## 🧪 Example Output
+## 🧩 Putting It All Together
 
-A runnable sample of the code can be found in [`bulk_vs_single.py`](https://github.com/chironmind/CentaurTechnicalIndicators-How-To-guides/blob/main/examples/bulk_vs_single.py)
-
-```text
-Bulk RSIs: [47.49434607156126, 50.3221945432267, ..., 40.34609500741716]
-Single RSI: 48.00106962275036
-```
+A runnable example of the full code can be found in the [bulk vs single example](../examples/howto_bulk_vs_single.md).
 
 - Use bulk when: calculating many historical values, initial setup, backtesting
 - Use single when: real-time updates, streaming data, memory constraints

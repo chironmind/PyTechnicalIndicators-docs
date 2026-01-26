@@ -203,3 +203,6 @@ An interactive Plotly chart will open in your browser showing:
 - ATR indicator in a third panel
 
 The chart will be interactive, allowing you to zoom, pan, and hover over data points.
+
+If you're using the sample data you should see a chart similar to the following:
+![technical dashboard](../assets/technical_dashboard.png)

@@ -167,9 +167,9 @@ if __name__ == "__main__":
 
 ---
 
-## 🧪 Output
+## 🧩 Putting It All Together
 
-A runnable sample of the code can be found in [`choose_period.py`](https://github.com/chironmind/CentaurTechnicalIndicators-How-To-guides/blob/main/examples/choose_period.py)
+A full runnable example of the code can be found in the [choose period example](../examples/howto_choose_period.md).
 
 ```text
 Loaded 251 prices

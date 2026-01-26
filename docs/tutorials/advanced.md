@@ -17,12 +17,12 @@ Series so far:
 
 You will learn how to:
 
-1. Enumerate RSI variants via different `constant_model_type` values.
+1. Enumerate RSI variants over different `constant_model_type` values.
 2. Iterate across a period grid (e.g., 5–30).
-3. Generate oversold / overbought signals (long/short candidates).
+3. Generate oversold / overbought signals.
 4. Score each signal using a forward-looking heuristic.
 5. Aggregate scores into a ranked table of configurations.
-7. Plan how to extend the same pattern to other indicators.
+6. Plan how to extend the same pattern to other indicators.
 
 ---
 
@@ -47,6 +47,10 @@ We will vary:
 ---
 
 ## 📂 Data Setup
+
+If you already have a CSV point to your CSV, we will be using `prices.csv` for our tutorials.
+
+You can find a copyable sample `prices.csv` file [here](../examples/index.md).
 
 ```python
 import pandas as pd
@@ -82,7 +86,7 @@ results = []
 
 for ctype in CONSTANT_MODELS:
     # Compute RSI for this model type
-    rsi_vals = pti.momentum_indicators.bulk.relative_strength_index(
+    rsi_vals = cti.momentum_indicators.bulk.relative_strength_index(
         close,
         constant_model_type=ctype,
         period=RSI_PERIOD
@@ -138,7 +142,6 @@ RSI Model Ratings (RSI < 30, period=5):
 2  exponential       5       46               22      0.478261
 
 Best model: median (Success Rate: 55.81%)
-
 ```
 
 ---
@@ -170,7 +173,7 @@ Best model: median (Success Rate: 55.81%)
 
 ## 🧩 Putting It All Together
 
-A runnable example of the full code can be found in [`03_advanced_centaur_technical_indicators.py`](https://github.com/chironmind/CentaurTechnicalIndicators_Tutorials/blob/main/examples/03_advanced_centaur_technical_indicators.py)
+A runnable example of the full code can be found in the [full advanced RSI example](../examples/tutorial_advanced.md).
 
 ---
 
