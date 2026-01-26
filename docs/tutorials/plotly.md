@@ -188,6 +188,7 @@ fig.show()
 
 ## 💾 Static Export
 
+To export static images (for example PNG files) from Plotly, install the optional Kaleido image export engine (requires a Chromium-based browser):
 ```bash
 pip install kaleido
 ```

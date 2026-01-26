@@ -10,9 +10,9 @@ Comprehensive documentation for all modules, classes, and functions available in
 - **[Momentum Indicators](momentum-indicators.md)** - RSI, MACD, stochastic oscillators, rate of change...
 - **[Moving Average](moving-average.md)** - Moving average, McGinley Dynamic
 - **[Other Indicators](other-indicators.md)** - True Range, internal bar strength, return on investment...
-- **[Strength Indicators](strength-indicators.md)** - Relative vigor index, +ve/-ve volumw inswz, accumulation distribution
+- **[Strength Indicators](strength-indicators.md)** - Relative vigor index, +ve/-ve volume index, accumulation distribution
 - **[Trend Indicators](trend-indicators.md)** - Aroon up/down, oscillator, and indicator, volume price trend...
-- **[Volatility Indicators](volatility-indicators.md)** - Ulcer index, volatiltiy sytem
+- **[Volatility Indicators](volatility-indicators.md)** - Ulcer index, volatility system
 
 ---
 
