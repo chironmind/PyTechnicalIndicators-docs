@@ -42,7 +42,7 @@ pip install plotly
 
 ## 📁 Data & Indicators Recap
 
-If you already followed Tutorial 1 and have a DataFrame with:
+If you already followed Tutorial 1, you have a DataFrame with:
 
 - `SMA_20`
 - `MCB_Lower`, `MCB_EMA`, `MCB_Upper`
@@ -188,10 +188,9 @@ fig.show()
 
 ## 💾 Static Export
 
-Install Kaleido (already in prerequisites, requires chromium):
-
+To export static images (for example PNG files) from Plotly, install the optional Kaleido image export engine (requires a Chromium-based browser):
 ```bash
-pip install -U kaleido
+pip install kaleido
 ```
 
 Then:
@@ -251,7 +250,7 @@ Ideas you can try before the next tutorial:
 
 ## 🧩 Putting It All Together
 
-A runnable example of the full code can be found in [`02_using_plotly_and_centaur_technical_indicators.py`](https://github.com/chironmind/CentaurTechnicalIndicators_Tutorials/blob/main/examples/02_using_plotly_and_centaur_technical_indicators.py)
+A runnable example of the full code can be found in the [plotly full example](../examples/tutorial_plotly.md)
 
 ```bash
 python3 examples/02_using_plotly_and_centaur_technical_indicators.py

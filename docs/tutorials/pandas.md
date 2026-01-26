@@ -270,7 +270,7 @@ Consult the project [API reference](../api/index.md) for model-specific effects:
 
 ## 🧩 Putting It All Together
 
-A runnable example of the full code can be found [here](../examples/tutorial_pandas.md)
+A runnable example of the full code can be found in the [full pandas example](../examples/tutorial_pandas.md)
 
 
 

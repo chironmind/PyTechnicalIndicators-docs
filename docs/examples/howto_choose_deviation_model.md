@@ -1,42 +1,15 @@
-# How to determine the best `deviation_model` for a Centaur Technical Indicators function
+# How to choose the best deviation model example
 
-This guide shows how to programmatically determine the best `deviation_model` for your indicator using the Python package Centaur Technical Indicators.
+A full example of programmatically determining the best deviation model for Moving Constant Bands
+from [the how-to guide](../howto/choose-deviation-model.md).
 
-The rating model is overly simplified and should be refined to suit your needs before usage.
-
----
-
-## 🎯 Goal
-
-- Determine the best `deviation_model` for the Moving Constant Bands from a year of data
-
-> This guide assumes you can load price data from a CSV file (see the "Get data from CSV" section below).
-
----
-
-## 📦 Requirements
-
-Install Centaur Technical Indicators:
-
-```bash
-pip install centaur_technical_indicators
-```
-
----
-
-## 💻 Step-by-Step
-
-### 1. Get data from CSV
-
-This example expects a CSV file with either
-
-- a header containing a "close" column (case-insensitive), or
-- a single column of prices (no header)
-
-Example loader:
+## Full code
 
 ```python
 import csv
+import sys
+from centaur_technical_indicators import candle_indicators as ci
+
 
 def load_prices_from_csv(path: str) -> list[float]:
     prices: list[float] = []
@@ -74,59 +47,20 @@ def load_prices_from_csv(path: str) -> list[float]:
                 except ValueError:
                     continue
     return prices
-```
 
-### 2. Calculate moving constant bands for multiple deviation models
 
-The default deviation model is the standard deviation; however other models may provide more insight.
-
-We’ll test several deviation models while keeping the constant model fixed (e.g., exponential moving average), a deviation multiplier (e.g., 2.0), and a short period (e.g., 5) for illustration.
-
-```python
-from centaur_technical_indicators import candle_indicators as ci
-
-period = 5
-deviation_multiplier = 2.0
-constant_model = "exponential"  # or "exponential_moving_average"
-
-deviation_models = [
-    "standard",  # or "standard_deviation"
-    "mean",      # or "mean_absolute_deviation"
-    "median",    # or "median_absolute_deviation"
-    "mode",      # or "mode_absolute_deviation"
-    "ulcer",     # or "ulcer_index"
-]
-
-# Example:
-# bands = ci.bulk.moving_constant_bands(prices, constant_model, dev_model, deviation_multiplier, period)
-```
-
-### 3. Rate each model to find the best
-
-> The logic is overly simple for the purpose of the guide.
-
-- If price > upper band (overbought) and next price < current price, model gets +1
-- If price < lower band (oversold) and next price > current price, model gets +1
-
-We normalize the score by the number of "attempts" (how many times we evaluated a signal).
-
-Important: `moving_constant_bands` returns tuples ordered as (`lower_band`, `moving_constant`, `upper_band`). Align the band window to the price index i using `bands_idx = i - (period - 1)`.
-
-```python
 def choose_best_deviation_model(
     prices: list[float],
-    constant_model_type: str = "exponential",
+    constant_model_type: str = "exponential_moving_average",
     deviation_multiplier: float = 2.0,
     period: int = 5,
 ) -> tuple[str, float]:
-    from centaur_technical_indicators import candle_indicators as ci
-
     deviation_models = [
-        "standard",  # or "standard_deviation"
-        "mean",      # or "mean_absolute_deviation"
-        "median",    # or "median_absolute_deviation"
-        "mode",      # or "mode_absolute_deviation"
-        "ulcer",     # or "ulcer_index"
+        "standard_deviation",
+        "mean_absolute_deviation",
+        "median_absolute_deviation",
+        "mode_absolute_deviation",
+        "ulcer_index",
     ]
 
     best_rating = -1.0
@@ -167,14 +101,7 @@ def choose_best_deviation_model(
             best_model = dm
 
     return best_model, best_rating
-```
 
-### 4. Calling from `main`
-
-```python
-import sys
-
-# Reuse load_prices_from_csv and choose_best_deviation_model from above
 
 def main():
     if len(sys.argv) < 2:
@@ -192,32 +119,28 @@ def main():
 
     best_model, best_rating = choose_best_deviation_model(
         prices,
-        constant_model_type="exponential",  # keep constant model fixed for this search
+        constant_model_type="exponential_moving_average",
         deviation_multiplier=2.0,
         period=5,
     )
     print(f"Best model for moving constant bands is {best_model} with a rating of {best_rating}")
 
+
 if __name__ == "__main__":
     main()
 ```
 
----
+## Run the code
 
-## 🧩 Putting It All Together
+```shell
+python3 your_file_name.py prices.csv
+```
 
-A full runnable example of the code can be found in the  [choose deviation model example](../examples/howto_choose_deviation_model.md).
+## Expected output
 
+```text
+Loaded 251 prices
+Best model for moving constant bands is median_absolute_deviation with a rating of 0.6666666666666666
+```
 
----
-
-## ✅ Next Steps
-
-- Programmatically choose a period
-- Programmatically choose a `constant_model_type`
-- Programmatically choose a deviation multiplier
-- Combine all selections
-- Introduce the notion of punishment to the rating system (e.g., penalize false signals/whipsaws)
-
----
-
+Note: The best model and rating will vary based on your prices.csv data.

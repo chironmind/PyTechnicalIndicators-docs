@@ -1,42 +1,15 @@
-# How to determine the best `constant_model_type` for a Centaur Technical Indicators function
+# How to choose the best constant model type example
 
-This guide shows how to programmatically determine the best `constant_model_type` for your indicator using the Python package Centaur Technical Indicators.
+A full example of programmatically determining the best constant model type for RSI
+from [the how-to guide](../howto/choose-constant-model-type.md).
 
-The rating model is overly simplified and should be refined to suit your needs before usage.
-
----
-
-## 🎯 Goal
-
-- Determine the best `constant_model_type` for the RSI from a year of data
-
-> This guide assumes you can load price data from a CSV file (see the "Get data from CSV" section below).
-
----
-
-## 📦 Requirements
-
-Install Centaur Technical Indicators:
-
-```bash
-pip install centaur_technical_indicators
-```
-
----
-
-## 💻 Step-by-Step
-
-### 1. Get data from CSV
-
-This example expects a CSV file with either:
-
-- a header containing a "close" column (case-insensitive), or
-- a single column of prices (no header)
-
-Example loader:
+## Full code
 
 ```python
 import csv
+import sys
+from centaur_technical_indicators import momentum_indicators as mi
+
 
 def load_prices_from_csv(path: str) -> list[float]:
     prices: list[float] = []
@@ -74,43 +47,9 @@ def load_prices_from_csv(path: str) -> list[float]:
                 except ValueError:
                     continue
     return prices
-```
 
-### 2. Calculate the RSI for multiple constant models
 
-The default model for the RSI is a smoothed moving average.
-
-We’ll test several models and compute the RSI series for each using the bulk function.
-
-```python
-from centaur_technical_indicators import momentum_indicators as mi
-
-period = 14
-models = [
-    "simple_moving_average",
-    "smoothed_moving_average",
-    "exponential_moving_average",
-    "simple_moving_median",
-    "simple_moving_mode",
-]
-
-# Example: prices = load_prices_from_csv("data.csv")
-# rsi_series = mi.bulk.relative_strength_index(prices, model, period)
-```
-
-### 3. Rate each RSI to find the best
-
-> The logic is overly simple for the purpose of the guide.
-
-- If RSI > 70 (overbought) and the next price < current price, the model gets +1
-- If RSI < 30 (oversold) and the next price > current price, the model gets +1
-
-We normalize the score by the number of "attempts" (how many times we evaluated a signal).
-
-```python
 def choose_best_rsi_model(prices: list[float], period: int = 14) -> tuple[str, float]:
-    from centaur_technical_indicators import momentum_indicators as mi
-
     models = [
         "simple_moving_average",
         "smoothed_moving_average",
@@ -150,15 +89,7 @@ def choose_best_rsi_model(prices: list[float], period: int = 14) -> tuple[str, f
             best_model = m
 
     return best_model, best_rating
-```
 
-### 4. Full example
-
-```python
-import sys
-from centaur_technical_indicators import momentum_indicators as mi
-
-# Reuse load_prices_from_csv and choose_best_rsi_model from above
 
 def main():
     if len(sys.argv) < 2:
@@ -177,22 +108,22 @@ def main():
     best_model, best_rating = choose_best_rsi_model(prices, period=14)
     print(f"Best model for RSI is {best_model} with a rating of {best_rating}")
 
+
 if __name__ == "__main__":
     main()
 ```
 
----
+## Run the code
 
-## 🧩 Putting It All Together
+```shell
+python3 your_file_name.py prices.csv
+```
 
-A full runnable example of the code can be found in the [choose constant model example](../examples/howto_choose_constant_model_type.md).
+## Expected output
 
----
+```text
+Loaded 251 prices
+Best model for RSI is simple_moving_average with a rating of 0.5625
+```
 
-## ✅ Next Steps
-
-- Programmatically choose a period (e.g., grid search over common RSI periods like 7, 14, 21)
-- Combine period selection and constant model selection
-- Introduce the notion of punishment to the rating system (e.g., penalize false signals or whipsaws)
-
-
+Note: The best model and rating will vary based on your prices.csv data.

@@ -1,42 +1,15 @@
-# How to determine the best period for a Centaur Technical Indicators function
+# How to choose the best period example
 
-This guide shows how to programmatically determine the best period for your indicator using the Python package Centaur Technical Indicators.
+A full example of programmatically determining the best period for RSI
+from [the how-to guide](../howto/choose-period.md).
 
-The rating model is overly simplified and should be refined to suit your needs before usage.
-
----
-
-## 🎯 Goal
-
-- Determine the best period for the RSI from a year of data
-
-> This guide assumes you can load price data from a CSV file (see the "Get data from CSV" section below).
-
----
-
-## 📦 Requirements
-
-Install Centaur Technical Indicators:
-
-```bash
-pip install centaur_technical_indicators
-```
-
----
-
-## 💻 Step-by-Step
-
-### 1. Get data from CSV
-
-This example expects a CSV file with either:
-
-- a header containing a "close" column (case-insensitive), or
-- a single column of prices (no header)
-
-Example loader:
+## Full code
 
 ```python
 import csv
+import sys
+from centaur_technical_indicators import momentum_indicators as mi
+
 
 def load_prices_from_csv(path: str) -> list[float]:
     prices: list[float] = []
@@ -74,35 +47,9 @@ def load_prices_from_csv(path: str) -> list[float]:
                 except ValueError:
                     continue
     return prices
-```
 
-### 2. Calculate the RSI for multiple periods
 
-The default RSI period is 14. We’ll iterate from 2 to 15 to see if a different period performs better (excluding 1 to avoid degenerate windows).
-
-```python
-from centaur_technical_indicators import momentum_indicators as mi
-
-model = "smoothed_moving_average"  # default for RSI
-# Example:
-# rsi_series = mi.bulk.relative_strength_index(prices, model, period)
-```
-
-### 3. Rate each different RSI to find the best
-
-> The logic is overly simple for the purpose of the guide.
-
-- If RSI > 70 (overbought) and the next price < current price, the period gets +1
-- If RSI < 30 (oversold) and the next price > current price, the period gets +1
-
-We normalize the score by the number of "attempts" (how many times we evaluated a signal).
-
-Note: For period p, rsi[0] corresponds to prices index i = p (0-based). We’ll align indices accordingly.
-
-```python
 def choose_best_rsi_period(prices: list[float], min_p: int = 2, max_p: int = 15) -> tuple[int, float]:
-    from centaur_technical_indicators import momentum_indicators as mi
-
     best_rating = -1.0
     best_period = min_p
     model = "smoothed_moving_average"
@@ -135,14 +82,7 @@ def choose_best_rsi_period(prices: list[float], min_p: int = 2, max_p: int = 15)
             best_period = p
 
     return best_period, best_rating
-```
 
-### 4. Full example
-
-```python
-import sys
-
-# Reuse load_prices_from_csv and choose_best_rsi_period from above
 
 def main():
     if len(sys.argv) < 2:
@@ -161,26 +101,22 @@ def main():
     best_period, best_rating = choose_best_rsi_period(prices, min_p=2, max_p=15)
     print(f"Best period for RSI is {best_period} with a rating of {best_rating}")
 
+
 if __name__ == "__main__":
     main()
 ```
 
----
+## Run the code
 
-## 🧩 Putting It All Together
+```shell
+python3 your_file_name.py prices.csv
+```
 
-A full runnable example of the code can be found in the [choose period example](../examples/howto_choose_period.md).
+## Expected output
 
 ```text
 Loaded 251 prices
 Best period for RSI is 7 with a rating of 0.5555555555555556
 ```
 
----
-
-## ✅ Next Steps
-
-- Programmatically choose a [constant model type](choose-constant-model-type.md))
-- Combine period selection and constant model type selection
-- Introduce the notion of punishment to the rating system (e.g., penalize false signals/whipsaws)
-
+Note: The best period and rating will vary based on your prices.csv data.

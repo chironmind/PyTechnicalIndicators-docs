@@ -50,7 +50,7 @@ https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&limit=365
 
 ---
 
-## 🧑‍💻 Fetching Data from marketdata.app
+## 🧑‍💻 Fetching Data from the Binance API
 
 ```python
 import requests
@@ -106,7 +106,7 @@ Use Plotly as shown in [Tutorial 2](plotly.md) to quickly visualize live data wi
 
 ## 🧩 Putting It All Together
 
-A runnable example of the full code can be found in [`04_api_connection`](https://github.com/chironmind/CentaurTechnicalIndicators_Tutorials/blob/main/examples/04_api_connection.py)
+A runnable example of the full code can be found in the [api connection full example](../examples/tutorial_api_connection.md).
 
 
 ---

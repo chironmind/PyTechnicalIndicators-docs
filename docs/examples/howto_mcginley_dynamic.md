@@ -1,41 +1,14 @@
-# How to use McGinley Dynamic in Centaur Technical Indicators
+# How to use McGinley Dynamic example
 
-This guide shows how to use the McGinley Dynamic bands with the Python package Centaur Technical Indicators.  
-The same logic can be applied to other McGinley Dynamic functions.
+A full example of using McGinley Dynamic bands
+from [the how-to guide](../howto/mcginley-dynamic.md).
 
----
-
-## 🎯 Goal
-
-- Use the McGinley Dynamic bands
-
-> This guide assumes you can load price data from a CSV file (see the "Get data from CSV" section below).
-
----
-
-## 📦 Requirements
-
-Install Centaur Technical Indicators:
-
-```bash
-pip install centaur_technical_indicators
-```
-
----
-
-## 💻 Step-by-Step
-
-### 1. Get data from CSV
-
-This example expects a CSV file with either:
-
-- a header containing a "close" column (case-insensitive), or
-- a single column of prices (no header)
-
-Example loader:
+## Full code
 
 ```python
 import csv
+from centaur_technical_indicators import candle_indicators as ci
+
 
 def load_prices_from_csv(path: str) -> list[float]:
     prices: list[float] = []
@@ -73,23 +46,18 @@ def load_prices_from_csv(path: str) -> list[float]:
                 except ValueError:
                     continue
     return prices
-```
 
-### 2. Calculate the McGinley Dynamic bands
 
-The McGinley Dynamic uses a previously calculated value.  
-If no previous McGinley Dynamic is available, use 0.0 for the first computation.
-
-```python
-from centaur_technical_indicators import candle_indicators as ci
+# Load prices
+prices = load_prices_from_csv("prices.csv")
 
 # Example setup
 period = 5
-deviation_model = "standard"     # or "standard_deviation"
+deviation_model = "standard_deviation"
 deviation_multiplier = 2.0
 previous_mcginley_dynamic = 0.0  # none available on first run
 
-# prices = load_prices_from_csv("data.csv")
+# Calculate McGinley Dynamic bands
 bands = ci.bulk.mcginley_dynamic_bands(
     prices,
     deviation_model,
@@ -100,16 +68,8 @@ bands = ci.bulk.mcginley_dynamic_bands(
 
 print("Loaded", len(prices), "prices")
 print("Length of bands", len(bands))
-# bands is a list of tuples: (lower_band, mcginley_dynamic, upper_band)
-```
 
-### 3. Use the last value to calculate the next McGinley band
-
-From step 2, we now have a previous McGinley Dynamic (the middle value of the last tuple).  
-When a new price comes in, compute the next band using the single function.  
-Pass the latest period prices to align with the period used in bulk.
-
-```python
+# Use the last value to calculate the next McGinley band
 # Next price comes in
 new_price = 5689.24
 prices.append(new_price)
@@ -130,19 +90,18 @@ lower, mid, upper = next_band
 print(f"Lower band {lower}, McGinley dynamic {mid}, upper band {upper}")
 ```
 
----
+## Run the code
 
-## 🧩 Putting It All Together
+```shell
+python3 your_file_name.py
+```
 
-A full runnable example of the code can be found in the [McGinley dynamic example](../examples/howto_mcginley_dynamic.md).
+## Expected output
 
----
+```text
+Loaded 251 prices
+Length of bands 247
+Lower band 5551.313227907162, McGinley dynamic 5665.614575300795, upper band 5779.9159226944275
+```
 
-## ✅ Next Steps
-
-- Programmatically choose a period
-- Programmatically choose a `deviation_model`
-- Programmatically choose a deviation multiplier
-- Combine all selections
-- Introduce the notion of punishment to the rating system (e.g., penalize false signals/whipsaws)
-
+Note: Actual values will vary based on your prices.csv data.

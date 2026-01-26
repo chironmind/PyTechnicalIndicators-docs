@@ -5,14 +5,21 @@ Full runnable code examples for code snippets found in the documentation.
 To run these examples, ensure you have the following packages installed:
 
 ```bash
-pip install centaur_technical_indicators pandas
+pip install centaur_technical_indicators pandas plotly requests
 ```
 
 ## Tutorial Examples
-- [Using Pandas with Centaur Technical Indicators](../tutorials/pandas.md)
-
+- [Using Pandas with Centaur Technical Indicators](tutorial_pandas.md)
+- [Visualizing Indicators with Plotly](tutorial_plotly.md)
+- [Connecting to a Market Data API](tutorial_api_connection.md)
+- [Advanced Usage - Systematically Evaluating RSI Variants](tutorial_advanced.md)
 
 ## How-to Examples
+- [Using McGinley Dynamic](howto_mcginley_dynamic.md)
+- [Choosing the Best Deviation Model](howto_choose_deviation_model.md)
+- [Choosing the Best Period](howto_choose_period.md)
+- [Choosing the Best Constant Model Type](howto_choose_constant_model_type.md)
+- [Bulk vs Single Functions](howto_bulk_vs_single.md)
 
 
 
