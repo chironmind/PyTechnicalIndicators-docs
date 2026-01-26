@@ -1,0 +1,3689 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../strength-indicators/small/">
+      
+      
+        <link rel="next" href="../medium/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Large Dataset - Centaur Technical Indicators Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Centaur Technical Indicators Documentation" class="md-header__button md-logo" aria-label="Centaur Technical Indicators Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Centaur Technical Indicators Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Large Dataset
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Centaur Technical Indicators Documentation" class="md-nav__button md-logo" aria-label="Centaur Technical Indicators Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Centaur Technical Indicators Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/candle-indicators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Candle Indicators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/chart-trends/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chart Trends
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/correlation-indicators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Correlation Indicators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/momentum-indicators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momentum Indicators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/moving-average/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Moving Average
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/other-indicators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Other Indicators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/strength-indicators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strength Indicators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/trend-indicators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trend Indicators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/volatility-indicators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Volatility Indicators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/pandas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using Centaur Technical Indicators with pandas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/plotly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visualizing Indicators with Plotly
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Usage of Centaur Technical Indicators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/api-connection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connecting to a Market Data API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How-To Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    How-To Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../howto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../howto/bulk-vs-single/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bulk vs Single Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../howto/choose-constant-model-type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Choose Constant Model Type
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../howto/choose-deviation-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Choose Deviation Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../howto/choose-period/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Choose Period
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../howto/mcginley-dynamic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    McGinley Dynamic Bands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorial Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/tutorial_pandas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using Pandas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/tutorial_plotly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visualizing with Plotly
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/tutorial_advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced RSI Evaluation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/tutorial_api_connection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Connection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How-To Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    How-To Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/howto_bulk_vs_single/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bulk vs Single
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/howto_choose_constant_model_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Choose Constant Model Type
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/howto_choose_deviation_model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Choose Deviation Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/howto_choose_period/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Choose Period
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/howto_mcginley_dynamic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    McGinley Dynamic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benchmarks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Benchmarks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Candle Indicators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Candle Indicators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../candle-indicators/large/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../candle-indicators/medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medium Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../candle-indicators/small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Small Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chart Trends
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chart Trends
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chart-trends/large/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chart-trends/medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medium Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chart-trends/small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Small Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Correlation Indicators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Correlation Indicators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../correlation-indicators/large/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../correlation-indicators/medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medium Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../correlation-indicators/small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Small Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momentum Indicators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Momentum Indicators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../momentum-indicators/large/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../momentum-indicators/medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medium Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../momentum-indicators/small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Small Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Moving Average
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Moving Average
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moving-average/large/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moving-average/medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medium Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moving-average/small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Small Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_7" id="__nav_6_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Other Indicators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Other Indicators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other-indicators/large/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other-indicators/medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medium Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other-indicators/small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Small Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Standard Indicators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Standard Indicators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../standard-indicators/large/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../standard-indicators/medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medium Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../standard-indicators/small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Small Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strength Indicators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Strength Indicators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strength-indicators/large/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strength-indicators/medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medium Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strength-indicators/small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Small Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trend Indicators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Trend Indicators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medium Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Small Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Volatility Indicators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Volatility Indicators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../volatility-indicators/large/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../volatility-indicators/medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medium Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../volatility-indicators/small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Small Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Large Dataset</h1>
+
+<table>
+<thead>
+<tr>
+<th>Run Name</th>
+<th>Rounds</th>
+<th>Min (µs)</th>
+<th>Max (µs)</th>
+<th>Mean (µs)</th>
+<th>Median (µs)</th>
+<th>Stddev (µs)</th>
+<th>Ops/sec</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>test_single_aroon_up[large]</code></td>
+<td>14839</td>
+<td>38.44</td>
+<td>87.67</td>
+<td>38.96</td>
+<td>38.76</td>
+<td>2.23</td>
+<td>2.57e+04</td>
+</tr>
+<tr>
+<td><code>test_bulk_aroon_up[large]</code></td>
+<td>4510</td>
+<td>184.37</td>
+<td>430.23</td>
+<td>186.17</td>
+<td>184.91</td>
+<td>7.21</td>
+<td>5.37e+03</td>
+</tr>
+<tr>
+<td><code>test_single_aroon_down[large]</code></td>
+<td>20809</td>
+<td>40.41</td>
+<td>248.00</td>
+<td>40.95</td>
+<td>40.69</td>
+<td>2.99</td>
+<td>2.44e+04</td>
+</tr>
+<tr>
+<td><code>test_bulk_aroon_down[large]</code></td>
+<td>4272</td>
+<td>196.04</td>
+<td>487.71</td>
+<td>198.27</td>
+<td>197.06</td>
+<td>7.67</td>
+<td>5.04e+03</td>
+</tr>
+<tr>
+<td><code>test_single_aroon_oscillator[large]</code></td>
+<td>85035</td>
+<td>0.11</td>
+<td>1.70</td>
+<td>0.11</td>
+<td>0.11</td>
+<td>0.01</td>
+<td>8.80e+06</td>
+</tr>
+<tr>
+<td><code>test_bulk_aroon_oscillator[large]</code></td>
+<td>7866</td>
+<td>110.96</td>
+<td>357.93</td>
+<td>113.65</td>
+<td>113.08</td>
+<td>5.61</td>
+<td>8.80e+03</td>
+</tr>
+<tr>
+<td><code>test_single_aroon_indicator[large]</code></td>
+<td>11598</td>
+<td>78.13</td>
+<td>215.50</td>
+<td>79.19</td>
+<td>78.54</td>
+<td>4.64</td>
+<td>1.26e+04</td>
+</tr>
+<tr>
+<td><code>test_bulk_aroon_indicator[large]</code></td>
+<td>387</td>
+<td>502.49</td>
+<td>763.70</td>
+<td>536.70</td>
+<td>508.14</td>
+<td>47.19</td>
+<td>1.86e+03</td>
+</tr>
+<tr>
+<td><code>test_single_long_parabolic[large]</code></td>
+<td>194251</td>
+<td>0.12</td>
+<td>2.56</td>
+<td>0.13</td>
+<td>0.13</td>
+<td>0.02</td>
+<td>7.84e+06</td>
+</tr>
+<tr>
+<td><code>test_single_short_parabolic[large]</code></td>
+<td>194251</td>
+<td>0.12</td>
+<td>5.76</td>
+<td>0.13</td>
+<td>0.13</td>
+<td>0.03</td>
+<td>7.75e+06</td>
+</tr>
+<tr>
+<td><code>test_bulk_parabolic[long-large]</code></td>
+<td>2591</td>
+<td>338.43</td>
+<td>699.57</td>
+<td>344.41</td>
+<td>341.84</td>
+<td>12.85</td>
+<td>2.90e+03</td>
+</tr>
+<tr>
+<td><code>test_bulk_parabolic[short-large]</code></td>
+<td>2771</td>
+<td>340.28</td>
+<td>833.66</td>
+<td>347.81</td>
+<td>342.64</td>
+<td>21.10</td>
+<td>2.88e+03</td>
+</tr>
+<tr>
+<td><code>test_bulk_dms[simple-large]</code></td>
+<td>106</td>
+<td>481.47</td>
+<td>1374.71</td>
+<td>541.15</td>
+<td>487.58</td>
+<td>158.03</td>
+<td>1.85e+03</td>
+</tr>
+<tr>
+<td><code>test_bulk_dms[smoothed-large]</code></td>
+<td>1347</td>
+<td>671.10</td>
+<td>1340.22</td>
+<td>685.50</td>
+<td>674.64</td>
+<td>48.43</td>
+<td>1.46e+03</td>
+</tr>
+<tr>
+<td><code>test_bulk_dms[exponential-large]</code></td>
+<td>1388</td>
+<td>670.16</td>
+<td>1343.02</td>
+<td>682.75</td>
+<td>674.36</td>
+<td>43.38</td>
+<td>1.46e+03</td>
+</tr>
+<tr>
+<td><code>test_bulk_dms[median-large]</code></td>
+<td>772</td>
+<td>1220.39</td>
+<td>1977.57</td>
+<td>1240.25</td>
+<td>1229.93</td>
+<td>41.40</td>
+<td>8.06e+02</td>
+</tr>
+<tr>
+<td><code>test_bulk_dms[mode-large]</code></td>
+<td>403</td>
+<td>2394.61</td>
+<td>3151.40</td>
+<td>2424.95</td>
+<td>2408.45</td>
+<td>53.86</td>
+<td>4.12e+02</td>
+</tr>
+<tr>
+<td><code>test_single_vpt[large]</code></td>
+<td>197785</td>
+<td>0.12</td>
+<td>2.36</td>
+<td>0.13</td>
+<td>0.13</td>
+<td>0.02</td>
+<td>7.81e+06</td>
+</tr>
+<tr>
+<td><code>test_bulk_vpt[large]</code></td>
+<td>6288</td>
+<td>116.96</td>
+<td>321.36</td>
+<td>118.75</td>
+<td>117.87</td>
+<td>6.00</td>
+<td>8.42e+03</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-simple-simple]</code></td>
+<td>6649</td>
+<td>140.91</td>
+<td>357.69</td>
+<td>142.20</td>
+<td>141.39</td>
+<td>5.50</td>
+<td>7.03e+03</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-simple-smoothed]</code></td>
+<td>1064</td>
+<td>916.53</td>
+<td>1012.02</td>
+<td>924.42</td>
+<td>920.37</td>
+<td>11.54</td>
+<td>1.08e+03</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-simple-exponential]</code></td>
+<td>1058</td>
+<td>918.37</td>
+<td>1126.70</td>
+<td>928.77</td>
+<td>924.83</td>
+<td>13.19</td>
+<td>1.08e+03</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-simple-median]</code></td>
+<td>348</td>
+<td>2724.95</td>
+<td>2851.52</td>
+<td>2749.85</td>
+<td>2741.35</td>
+<td>20.41</td>
+<td>3.64e+02</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-simple-mode]</code></td>
+<td>142</td>
+<td>7019.85</td>
+<td>7282.04</td>
+<td>7059.82</td>
+<td>7064.77</td>
+<td>29.61</td>
+<td>1.42e+02</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-smoothed-simple]</code></td>
+<td>4212</td>
+<td>222.93</td>
+<td>295.95</td>
+<td>225.13</td>
+<td>223.95</td>
+<td>5.75</td>
+<td>4.44e+03</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-smoothed-smoothed]</code></td>
+<td>974</td>
+<td>997.48</td>
+<td>1134.63</td>
+<td>1007.50</td>
+<td>1003.32</td>
+<td>11.91</td>
+<td>9.93e+02</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-smoothed-exponential]</code></td>
+<td>987</td>
+<td>1000.94</td>
+<td>1106.46</td>
+<td>1012.30</td>
+<td>1007.70</td>
+<td>12.40</td>
+<td>9.88e+02</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-smoothed-median]</code></td>
+<td>333</td>
+<td>2931.12</td>
+<td>3129.57</td>
+<td>2956.15</td>
+<td>2944.25</td>
+<td>25.62</td>
+<td>3.38e+02</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-smoothed-mode]</code></td>
+<td>139</td>
+<td>7105.89</td>
+<td>7328.08</td>
+<td>7145.85</td>
+<td>7149.94</td>
+<td>29.14</td>
+<td>1.40e+02</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-exponential-simple]</code></td>
+<td>4206</td>
+<td>222.84</td>
+<td>427.71</td>
+<td>225.03</td>
+<td>223.80</td>
+<td>6.70</td>
+<td>4.44e+03</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-exponential-smoothed]</code></td>
+<td>991</td>
+<td>997.48</td>
+<td>1216.22</td>
+<td>1007.93</td>
+<td>1003.18</td>
+<td>14.43</td>
+<td>9.92e+02</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-exponential-exponential]</code></td>
+<td>975</td>
+<td>1001.01</td>
+<td>1129.74</td>
+<td>1012.27</td>
+<td>1007.79</td>
+<td>12.99</td>
+<td>9.88e+02</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-exponential-median]</code></td>
+<td>334</td>
+<td>2923.56</td>
+<td>3076.95</td>
+<td>2950.08</td>
+<td>2940.14</td>
+<td>22.85</td>
+<td>3.39e+02</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-exponential-mode]</code></td>
+<td>139</td>
+<td>7101.96</td>
+<td>7312.43</td>
+<td>7142.63</td>
+<td>7147.11</td>
+<td>27.98</td>
+<td>1.40e+02</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-median-simple]</code></td>
+<td>3386</td>
+<td>236.89</td>
+<td>460.40</td>
+<td>239.63</td>
+<td>237.84</td>
+<td>8.32</td>
+<td>4.17e+03</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-median-smoothed]</code></td>
+<td>894</td>
+<td>1013.37</td>
+<td>1117.74</td>
+<td>1023.19</td>
+<td>1018.16</td>
+<td>13.71</td>
+<td>9.77e+02</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-median-exponential]</code></td>
+<td>948</td>
+<td>1015.18</td>
+<td>1268.18</td>
+<td>1027.77</td>
+<td>1022.63</td>
+<td>16.05</td>
+<td>9.73e+02</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-median-median]</code></td>
+<td>332</td>
+<td>2952.53</td>
+<td>3097.88</td>
+<td>2980.82</td>
+<td>2972.78</td>
+<td>20.99</td>
+<td>3.35e+02</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-median-mode]</code></td>
+<td>139</td>
+<td>7101.50</td>
+<td>7408.72</td>
+<td>7145.56</td>
+<td>7147.05</td>
+<td>36.83</td>
+<td>1.40e+02</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-mode-simple]</code></td>
+<td>3796</td>
+<td>238.60</td>
+<td>404.19</td>
+<td>260.43</td>
+<td>260.10</td>
+<td>7.91</td>
+<td>3.84e+03</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-mode-smoothed]</code></td>
+<td>961</td>
+<td>1017.68</td>
+<td>1286.93</td>
+<td>1042.73</td>
+<td>1038.79</td>
+<td>15.41</td>
+<td>9.59e+02</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-mode-exponential]</code></td>
+<td>945</td>
+<td>1021.61</td>
+<td>1164.06</td>
+<td>1048.39</td>
+<td>1044.42</td>
+<td>13.78</td>
+<td>9.54e+02</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-mode-median]</code></td>
+<td>329</td>
+<td>2950.62</td>
+<td>3327.09</td>
+<td>2988.05</td>
+<td>2978.84</td>
+<td>29.01</td>
+<td>3.35e+02</td>
+</tr>
+<tr>
+<td><code>test_single_tsi[large-mode-mode]</code></td>
+<td>140</td>
+<td>7131.61</td>
+<td>7439.39</td>
+<td>7183.38</td>
+<td>7186.46</td>
+<td>32.61</td>
+<td>1.39e+02</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-simple-simple]</code></td>
+<td>430</td>
+<td>2235.64</td>
+<td>2547.61</td>
+<td>2251.27</td>
+<td>2242.19</td>
+<td>24.20</td>
+<td>4.44e+02</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-simple-smoothed]</code></td>
+<td>92</td>
+<td>10784.13</td>
+<td>11030.44</td>
+<td>10825.54</td>
+<td>10821.34</td>
+<td>32.89</td>
+<td>9.24e+01</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-simple-exponential]</code></td>
+<td>92</td>
+<td>10899.00</td>
+<td>11134.48</td>
+<td>10926.57</td>
+<td>10917.13</td>
+<td>31.32</td>
+<td>9.15e+01</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-simple-median]</code></td>
+<td>28</td>
+<td>35610.44</td>
+<td>36201.43</td>
+<td>35756.86</td>
+<td>35709.99</td>
+<td>125.33</td>
+<td>2.80e+01</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-simple-mode]</code></td>
+<td>11</td>
+<td>95097.01</td>
+<td>96275.36</td>
+<td>95418.25</td>
+<td>95178.38</td>
+<td>405.93</td>
+<td>1.05e+01</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-smoothed-simple]</code></td>
+<td>329</td>
+<td>3021.64</td>
+<td>3239.83</td>
+<td>3027.89</td>
+<td>3025.34</td>
+<td>14.95</td>
+<td>3.30e+02</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-smoothed-smoothed]</code></td>
+<td>87</td>
+<td>11557.34</td>
+<td>12117.25</td>
+<td>11594.80</td>
+<td>11595.01</td>
+<td>60.94</td>
+<td>8.62e+01</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-smoothed-exponential]</code></td>
+<td>86</td>
+<td>11641.97</td>
+<td>11998.77</td>
+<td>11664.88</td>
+<td>11656.53</td>
+<td>40.16</td>
+<td>8.57e+01</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-smoothed-median]</code></td>
+<td>28</td>
+<td>36245.93</td>
+<td>36534.73</td>
+<td>36420.91</td>
+<td>36457.68</td>
+<td>96.18</td>
+<td>2.75e+01</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-smoothed-mode]</code></td>
+<td>11</td>
+<td>95886.98</td>
+<td>96313.76</td>
+<td>96003.19</td>
+<td>95914.01</td>
+<td>162.24</td>
+<td>1.04e+01</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-exponential-simple]</code></td>
+<td>328</td>
+<td>3030.91</td>
+<td>3100.92</td>
+<td>3038.78</td>
+<td>3037.43</td>
+<td>7.53</td>
+<td>3.29e+02</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-exponential-smoothed]</code></td>
+<td>87</td>
+<td>11527.54</td>
+<td>11646.62</td>
+<td>11567.91</td>
+<td>11567.19</td>
+<td>20.11</td>
+<td>8.64e+01</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-exponential-exponential]</code></td>
+<td>86</td>
+<td>11686.51</td>
+<td>12555.07</td>
+<td>11718.19</td>
+<td>11699.69</td>
+<td>92.97</td>
+<td>8.53e+01</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-exponential-median]</code></td>
+<td>28</td>
+<td>36410.67</td>
+<td>37133.18</td>
+<td>36641.81</td>
+<td>36645.52</td>
+<td>159.45</td>
+<td>2.73e+01</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-exponential-mode]</code></td>
+<td>11</td>
+<td>95923.97</td>
+<td>96277.96</td>
+<td>95984.07</td>
+<td>95951.27</td>
+<td>101.03</td>
+<td>1.04e+01</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-median-simple]</code></td>
+<td>209</td>
+<td>4745.61</td>
+<td>4958.81</td>
+<td>4867.32</td>
+<td>4874.50</td>
+<td>27.43</td>
+<td>2.05e+02</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-median-smoothed]</code></td>
+<td>75</td>
+<td>13277.92</td>
+<td>13429.79</td>
+<td>13296.46</td>
+<td>13290.42</td>
+<td>24.88</td>
+<td>7.52e+01</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-median-exponential]</code></td>
+<td>75</td>
+<td>13369.36</td>
+<td>13542.09</td>
+<td>13407.63</td>
+<td>13410.29</td>
+<td>29.45</td>
+<td>7.46e+01</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-median-median]</code></td>
+<td>29</td>
+<td>35343.61</td>
+<td>35673.97</td>
+<td>35461.62</td>
+<td>35443.56</td>
+<td>80.73</td>
+<td>2.82e+01</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-median-mode]</code></td>
+<td>11</td>
+<td>97543.08</td>
+<td>97946.27</td>
+<td>97679.40</td>
+<td>97657.82</td>
+<td>100.65</td>
+<td>1.02e+01</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-mode-simple]</code></td>
+<td>128</td>
+<td>7797.52</td>
+<td>7911.06</td>
+<td>7810.17</td>
+<td>7807.26</td>
+<td>14.21</td>
+<td>1.28e+02</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-mode-smoothed]</code></td>
+<td>61</td>
+<td>16473.35</td>
+<td>16618.52</td>
+<td>16518.38</td>
+<td>16515.02</td>
+<td>23.84</td>
+<td>6.05e+01</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-mode-exponential]</code></td>
+<td>60</td>
+<td>16798.43</td>
+<td>16974.86</td>
+<td>16835.05</td>
+<td>16838.06</td>
+<td>28.90</td>
+<td>5.94e+01</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-mode-median]</code></td>
+<td>26</td>
+<td>38677.69</td>
+<td>39258.76</td>
+<td>38877.74</td>
+<td>38894.82</td>
+<td>163.95</td>
+<td>2.57e+01</td>
+</tr>
+<tr>
+<td><code>test_bulk_tsi[large-mode-mode]</code></td>
+<td>10</td>
+<td>100009.35</td>
+<td>100487.67</td>
+<td>100170.17</td>
+<td>100101.91</td>
+<td>167.42</td>
+<td>9.98e+00</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

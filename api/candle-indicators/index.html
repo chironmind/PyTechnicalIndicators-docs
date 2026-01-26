@@ -1,0 +1,5700 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../chart-trends/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Candle Indicators - Centaur Technical Indicators Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#candle-indicators-api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Centaur Technical Indicators Documentation" class="md-header__button md-logo" aria-label="Centaur Technical Indicators Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Centaur Technical Indicators Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Candle Indicators
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Centaur Technical Indicators Documentation" class="md-nav__button md-logo" aria-label="Centaur Technical Indicators Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Centaur Technical Indicators Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Candle Indicators
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Candle Indicators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 When to Use
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bulk-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Bulk Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Bulk Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#moving_constant_envelopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        moving_constant_envelopes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="moving_constant_envelopes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcginley_dynamic_envelopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mcginley_dynamic_envelopes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="mcginley_dynamic_envelopes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving_constant_bands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        moving_constant_bands
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="moving_constant_bands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcginley_dynamic_bands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mcginley_dynamic_bands
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="mcginley_dynamic_bands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ichimoku_cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ichimoku_cloud
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ichimoku_cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donchian_channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        donchian_channels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="donchian_channels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keltner_channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        keltner_channel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="keltner_channel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supertrend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        supertrend
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="supertrend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟢 Single Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟢 Single Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#moving_constant_envelopes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        moving_constant_envelopes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="moving_constant_envelopes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcginley_dynamic_envelopes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mcginley_dynamic_envelopes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="mcginley_dynamic_envelopes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving_constant_bands_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        moving_constant_bands
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="moving_constant_bands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcginley_dynamic_bands_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mcginley_dynamic_bands
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="mcginley_dynamic_bands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ichimoku_cloud_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ichimoku_cloud
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ichimoku_cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donchian_channels_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        donchian_channels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="donchian_channels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keltner_channel_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        keltner_channel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="keltner_channel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supertrend_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        supertrend
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="supertrend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-type-choices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧩 Model Type Choices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 See Also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chart-trends/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chart Trends
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../correlation-indicators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Correlation Indicators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../momentum-indicators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momentum Indicators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../moving-average/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Moving Average
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../other-indicators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Other Indicators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strength-indicators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strength Indicators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trend-indicators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trend Indicators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../volatility-indicators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Volatility Indicators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/pandas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using Centaur Technical Indicators with pandas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/plotly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visualizing Indicators with Plotly
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Usage of Centaur Technical Indicators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/api-connection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connecting to a Market Data API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How-To Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    How-To Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/bulk-vs-single/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bulk vs Single Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/choose-constant-model-type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Choose Constant Model Type
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/choose-deviation-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Choose Deviation Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/choose-period/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Choose Period
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/mcginley-dynamic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    McGinley Dynamic Bands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorial Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/tutorial_pandas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using Pandas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/tutorial_plotly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visualizing with Plotly
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/tutorial_advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced RSI Evaluation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/tutorial_api_connection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Connection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How-To Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    How-To Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/howto_bulk_vs_single/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bulk vs Single
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/howto_choose_constant_model_type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Choose Constant Model Type
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/howto_choose_deviation_model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Choose Deviation Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/howto_choose_period/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Choose Period
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/howto_mcginley_dynamic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    McGinley Dynamic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benchmarks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Benchmarks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Candle Indicators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Candle Indicators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/candle-indicators/large/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/candle-indicators/medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medium Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/candle-indicators/small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Small Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chart Trends
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chart Trends
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/chart-trends/large/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/chart-trends/medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medium Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/chart-trends/small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Small Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Correlation Indicators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Correlation Indicators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/correlation-indicators/large/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/correlation-indicators/medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medium Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/correlation-indicators/small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Small Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Momentum Indicators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Momentum Indicators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/momentum-indicators/large/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/momentum-indicators/medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medium Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/momentum-indicators/small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Small Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Moving Average
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Moving Average
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/moving-average/large/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/moving-average/medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medium Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/moving-average/small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Small Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_7" id="__nav_6_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Other Indicators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Other Indicators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/other-indicators/large/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/other-indicators/medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medium Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/other-indicators/small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Small Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Standard Indicators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Standard Indicators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/standard-indicators/large/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/standard-indicators/medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medium Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/standard-indicators/small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Small Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strength Indicators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Strength Indicators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/strength-indicators/large/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/strength-indicators/medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medium Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/strength-indicators/small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Small Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trend Indicators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Trend Indicators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/trend-indicators/large/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/trend-indicators/medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medium Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/trend-indicators/small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Small Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Volatility Indicators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Volatility Indicators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/volatility-indicators/large/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/volatility-indicators/medium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medium Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarks/volatility-indicators/small/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Small Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 When to Use
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bulk-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Bulk Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Bulk Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#moving_constant_envelopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        moving_constant_envelopes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="moving_constant_envelopes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcginley_dynamic_envelopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mcginley_dynamic_envelopes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="mcginley_dynamic_envelopes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving_constant_bands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        moving_constant_bands
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="moving_constant_bands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcginley_dynamic_bands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mcginley_dynamic_bands
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="mcginley_dynamic_bands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ichimoku_cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ichimoku_cloud
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ichimoku_cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donchian_channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        donchian_channels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="donchian_channels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keltner_channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        keltner_channel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="keltner_channel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supertrend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        supertrend
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="supertrend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟢 Single Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟢 Single Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#moving_constant_envelopes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        moving_constant_envelopes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="moving_constant_envelopes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcginley_dynamic_envelopes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mcginley_dynamic_envelopes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="mcginley_dynamic_envelopes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving_constant_bands_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        moving_constant_bands
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="moving_constant_bands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcginley_dynamic_bands_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mcginley_dynamic_bands
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="mcginley_dynamic_bands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ichimoku_cloud_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ichimoku_cloud
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ichimoku_cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donchian_channels_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        donchian_channels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="donchian_channels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keltner_channel_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        keltner_channel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="keltner_channel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supertrend_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        supertrend
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="supertrend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-type-choices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧩 Model Type Choices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 See Also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="candle-indicators-api-reference">🕯️ Candle Indicators API Reference</h1>
+<p><strong>Module:</strong> <code>candle_indicators</code>  </p>
+<p>Candle indicators are technical indicators designed for use with candlestick price charts.<br />
+They help identify trends, volatility, and price action patterns commonly used in trading and analysis.</p>
+<h2 id="when-to-use">📚 When to Use</h2>
+<ul>
+<li>Analyze support/resistance, volatility bands, and price channels on candle charts.</li>
+<li>Suitable for both traditional and crypto assets.</li>
+</ul>
+<h2 id="structure">🏗️ Structure</h2>
+<ul>
+<li><strong>single</strong>: Functions that return a single value for a slice of prices.</li>
+<li><strong>bulk</strong>: Functions that compute values of a slice of prices over a period and return a vector.</li>
+</ul>
+<hr />
+<h2 id="bulk-functions">🚀 Bulk Functions</h2>
+<p>Bulk functions operate over a moving window and return a list of values for the entire data series.</p>
+<h3 id="moving_constant_envelopes"><code>moving_constant_envelopes</code></h3>
+<pre><code class="language-python">moving_constant_envelopes(
+    prices: List[float],
+    constant_model_type: str,
+    difference: float,
+    period: int
+) -&gt; List[Tuple[float, float, float]]
+</code></pre>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li><strong>prices</strong>: List of prices</li>
+<li><strong>constant_model_type</strong>: Choice of:<ul>
+<li><code>"simple_moving_average"</code></li>
+<li><code>"smoothed_moving_average"</code></li>
+<li><code>"exponential_moving_average"</code></li>
+<li><code>"simple_moving_median"</code></li>
+<li><code>"simple_moving_mode"</code></li>
+</ul>
+</li>
+<li><strong>difference</strong>: Percent band width (e.g., <code>3.0</code> for ±3%)</li>
+<li><strong>period</strong>: Period over which to calculate the moving constant envelopes</li>
+</ul>
+<h4 id="returns">Returns</h4>
+<p>List of tuples (lower envelope, constant model result, upper envelope)</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-python">from centaur_technical_indicators import candle_indicators as ci
+
+prices = [
+    100.0, 102.0, 103.0, 102.5, 102.8, 103.1, 103.8, 103.9, 
+    104.4, 103.6, 103.1, 102.9, 103.3, 103.7
+]
+
+mces = ci.bulk.moving_constant_envelopes(
+    prices,
+    constant_model_type=&quot;simple_moving_average&quot;,
+    difference=2.0,
+    period=5
+)
+
+print(f&quot;Bulk Moving Constant Envelopes: {mces}&quot;)
+</code></pre>
+<p><strong>Output:</strong></p>
+<pre><code>Bulk Moving Constant Envelopes: [
+    (100.0188, 102.06, 104.1012), (100.62639999999999, 102.67999999999999, 104.7336), 
+    (100.97919999999999, 103.03999999999999, 105.10079999999999), 
+    (101.15559999999999, 103.22, 105.2844), (101.52799999999999, 103.6, 105.672), 
+    (101.6848, 103.75999999999999, 105.83519999999999), 
+    (101.68480000000002, 103.76000000000002, 105.83520000000001), (101.5084, 103.58, 105.6516), 
+    (101.3908, 103.46, 105.52919999999999), (101.2536, 103.32000000000001, 105.38640000000001)
+]
+</code></pre>
+<hr />
+<h3 id="mcginley_dynamic_envelopes"><code>mcginley_dynamic_envelopes</code></h3>
+<pre><code class="language-python">mcginley_dynamic_envelopes(
+    prices: List[float],
+    difference: float,
+    previous_mcginley_dynamic: float,
+    period: int
+) -&gt; List[Tuple[float, float, float]]
+</code></pre>
+<h4 id="arguments_1">Arguments</h4>
+<ul>
+<li><strong>prices</strong>: List of prices</li>
+<li><strong>difference</strong>: Percent band width (e.g., <code>3.0</code> for ±3%)</li>
+<li><strong>previous_mcginley_dynamic</strong>: Previous McGinley dynamic (use <code>0.0</code> if none)</li>
+<li><strong>period</strong>: Period over which to calculate the McGinley dynamic envelopes</li>
+</ul>
+<h4 id="returns_1">Returns</h4>
+<p>List of McGinley dynamic envelopes tuple (lower envelope, McGinley dynamic, upper envelope)</p>
+<h4 id="example_1">Example</h4>
+<pre><code class="language-python">from centaur_technical_indicators import candle_indicators as ci
+
+prices = [
+    100.0, 102.0, 103.0, 102.5, 102.8, 103.1, 103.8, 103.9,
+    104.4, 103.6, 103.1, 102.9, 103.3, 103.7
+]
+
+mdes = ci.bulk.mcginley_dynamic_envelopes(
+    prices,
+    difference=2.0,
+    previous_mcginley_dynamic=0.0,
+    period=5
+)
+
+print(f&quot;Bulk McGinley Dynamic Envelopes: {mdes}&quot;)
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code>Bulk McGinley Dynamic Envelopes: [
+    (100.744, 102.8, 104.856), (100.80211859724395, 102.85930469106525, 104.91649078488655), 
+    (100.9799014916942, 103.04071580785123, 105.10153012400825), 
+    (101.14281840437332, 103.20695755548297, 105.27109670659263), 
+    (101.36614779143355, 103.43484468513627, 105.50354157883899), 
+    (101.3983123111345, 103.46766562360663, 105.53701893607877), 
+    (101.32521640748107, 103.39307796681742, 105.46093952615377), 
+    (101.22670738127877, 103.29255855232527, 105.35840972337178), 
+    (101.22816548479628, 103.29404641305743, 105.35992734131858), 
+    (101.3064937650942, 103.37397322968796, 105.44145269428172)
+]
+</code></pre>
+<hr />
+<h3 id="moving_constant_bands"><code>moving_constant_bands</code></h3>
+<pre><code class="language-python">moving_constant_bands(
+    prices: List[float],
+    constant_model_type: str,
+    deviation_model: str,
+    deviation_multiplier: float,
+    period: int
+) -&gt; List[Tuple[float, float, float]]
+</code></pre>
+<h4 id="arguments_2">Arguments</h4>
+<ul>
+<li><strong>prices</strong>: List of prices</li>
+<li><strong>constant_model_type</strong>: Choice of:<ul>
+<li><code>"simple_moving_average"</code></li>
+<li><code>"smoothed_moving_average"</code></li>
+<li><code>"exponential_moving_average"</code></li>
+<li><code>"simple_moving_median"</code></li>
+<li><code>"simple_moving_mode"</code></li>
+</ul>
+</li>
+<li><strong>deviation_model</strong>: Choice of:<ul>
+<li><code>"standard_deviation"</code></li>
+<li><code>"mean_absolute_deviation"</code></li>
+<li><code>"median_absolute_deviation"</code></li>
+<li><code>"mode_absolute_deviation"</code></li>
+<li><code>"ulcer_index"</code></li>
+</ul>
+</li>
+<li><strong>deviation_multiplier</strong>: Price deviation multiplier</li>
+<li><strong>period</strong>: Period over which to calculate the moving constant bands</li>
+</ul>
+<h4 id="returns_2">Returns</h4>
+<p>List of Moving constant bands tuple (lower band, constant model result, upper band)</p>
+<h4 id="example_2">Example</h4>
+<pre><code class="language-python">from centaur_technical_indicators import candle_indicators as ci
+
+prices = [
+    100.0, 102.0, 103.0, 102.5, 102.8, 103.1, 103.8, 103.9,
+    104.4, 103.6, 103.1, 102.9, 103.3, 103.7
+]
+
+mcbs = ci.bulk.moving_constant_bands(
+    prices,
+    constant_model_type=&quot;simple_moving_average&quot;,
+    deviation_model=&quot;standard_deviation&quot;,
+    deviation_multiplier=2.0,
+    period=5
+)
+
+print(f&quot;Bulk Moving Constant Bands: {mcbs}&quot;)
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code>Bulk Moving Constant Bands: [
+    (99.89260525053695, 102.06, 104.22739474946306), 
+    (101.88602267034882, 102.67999999999999, 103.47397732965116), 
+    (102.17651867420308, 103.03999999999999, 103.9034813257969), 
+    (102.12163758258032, 103.22, 104.31836241741968), 
+    (102.44761117672896, 103.6, 104.75238882327103), 
+    (102.91525151672226, 103.75999999999999, 104.60474848327772), 
+    (102.9152515167223, 103.76000000000002, 104.60474848327775), 
+    (102.49630262526847, 103.58, 104.66369737473153), 
+    (102.41233593170328, 103.46, 104.5076640682967), 
+    (102.72133481811618, 103.32000000000001, 103.91866518188384)
+]
+</code></pre>
+<hr />
+<h3 id="mcginley_dynamic_bands"><code>mcginley_dynamic_bands</code></h3>
+<pre><code class="language-python">mcginley_dynamic_bands(
+    prices: List[float],
+    deviation_model: str,
+    deviation_multiplier: float,
+    previous_mcginley_dynamic: float,
+    period: int
+) -&gt; List[Tuple[float, float, float]]
+</code></pre>
+<h4 id="arguments_3">Arguments</h4>
+<ul>
+<li><strong>prices</strong>: List of prices</li>
+<li><strong>deviation_model</strong>: Choice of:<ul>
+<li><code>"standard_deviation"</code></li>
+<li><code>"mean_absolute_deviation"</code></li>
+<li><code>"median_absolute_deviation"</code></li>
+<li><code>"mode_absolute_deviation"</code></li>
+<li><code>"ulcer_index"</code></li>
+</ul>
+</li>
+<li><strong>deviation_multiplier</strong>: Price deviation multiplier</li>
+<li><strong>previous_mcginley_dynamic</strong>: Previous McGinley dynamic (<code>0.0</code> if none)</li>
+<li><strong>period</strong>: Period over which to calculate the moving constant bands</li>
+</ul>
+<h4 id="returns_3">Returns</h4>
+<p>List of McGinley dynamic bands tuple (lower band, McGinley dynamic, upper band)</p>
+<h4 id="example_3">Example</h4>
+<pre><code class="language-python">from centaur_technical_indicators import candle_indicators as ci
+
+prices = [
+    100.0, 102.0, 103.0, 102.5, 102.8, 103.1, 103.8, 103.9,
+    104.4, 103.6, 103.1, 102.9, 103.3, 103.7
+]
+
+mdbs = ci.bulk.mcginley_dynamic_bands(
+    prices,
+    deviation_model=&quot;standard_deviation&quot;,
+    deviation_multiplier=2.0,
+    previous_mcginley_dynamic=0.0,
+    period=5
+)
+
+print(f&quot;Bulk McGinley Dynamic Bands: {mdbs}&quot;)
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code>Bulk McGinley Dynamic Bands: [
+    (100.63260525053694, 102.8, 104.96739474946305), 
+    (102.06532736141408, 102.85930469106525, 103.65328202071642), 
+    (102.17723448205432, 103.04071580785123, 103.90419713364814), 
+    (102.1085951380633, 103.20695755548297, 104.30531997290265), 
+    (102.28245586186523, 103.43484468513627, 104.58723350840731), 
+    (102.62291714032891, 103.46766562360663, 104.31241410688436), 
+    (102.54832948353969, 103.39307796681742, 104.23782645009514), 
+    (102.20886117759375, 103.29255855232527, 104.3762559270568), 
+    (102.24638234476072, 103.29404641305743, 104.34171048135414), 
+    (102.77530804780413, 103.37397322968796, 103.9726384115718)
+]
+</code></pre>
+<hr />
+<h3 id="ichimoku_cloud"><code>ichimoku_cloud</code></h3>
+<pre><code class="language-python">ichimoku_cloud(
+    highs: List[float],
+    lows: List[float],
+    close: List[float],
+    conversion_period: int,
+    base_period: int,
+    span_b_period: int
+) -&gt; List[Tuple[float, float, float, float, float]]
+</code></pre>
+<h4 id="arguments_4">Arguments</h4>
+<ul>
+<li><strong>highs</strong>: List of price highs</li>
+<li><strong>lows</strong>: List of price lows</li>
+<li><strong>close</strong>: List of closing prices</li>
+<li><strong>conversion_period</strong>: Period used to calculate the conversion line</li>
+<li><strong>base_period</strong>: Period used to calculate the base line</li>
+<li><strong>span_b_period</strong>: Period used to calculate the Span B line</li>
+</ul>
+<h4 id="returns_4">Returns</h4>
+<p>A list of tuples, each tuple contains (leading span a, leading span b, base line, conversion line, relevant close price)</p>
+<h4 id="example_4">Example</h4>
+<pre><code class="language-python">from centaur_technical_indicators import candle_indicators as ci
+
+high_prices = [
+    105.0, 103.0, 107.0, 101.0, 103.0, 100.0, 109.0, 105.0,
+    110.0, 112.0, 111.0, 105.0, 106.0, 100.0, 103.0, 102.0, 98.0
+]
+low_prices = [
+    97.0, 99.0, 98.0, 100.0, 95.0, 98.0, 99.0, 100.0, 102.0, 106.0,
+    99.0, 101.0, 98.0, 93.0, 98.0, 91.0, 89.0
+]
+closing_prices = [
+    100.0, 102.0, 103.0, 101.0, 99.0, 99.0, 102.0, 103.0, 106.0,
+    107.0, 105.0, 104.0, 101.0, 97.0, 100.0, 96.0, 93.0
+]
+
+icloud = ci.bulk.ichimoku_cloud(
+    high_prices,
+    low_prices,
+    closing_prices,
+    conversion_period=5,
+    base_period=10,
+    span_b_period=15
+)
+
+print(f&quot;Bulk Ichimoku Cloud: {icloud}&quot;)
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code>Bulk Ichimoku Cloud: [
+    (102.25, 102.5, 102.5, 102.0, 99.0), (100.0, 101.5, 101.5, 98.5, 102.0), (99.0, 100.5, 100.5, 97.5, 103.0)
+]
+</code></pre>
+<hr />
+<h3 id="donchian_channels"><code>donchian_channels</code></h3>
+<pre><code class="language-python">donchian_channels(
+    high: List[float],
+    low: List[float],
+    period: int
+) -&gt; List[Tuple[float, float, float]]
+</code></pre>
+<h4 id="arguments_5">Arguments</h4>
+<ul>
+<li><strong>high</strong>: List of price highs</li>
+<li><strong>low</strong>: List of price lows</li>
+<li><strong>period</strong>: Period over which to calculate the Donchian channels</li>
+</ul>
+<h4 id="returns_5">Returns</h4>
+<p>List of Donchian channel tuples (lower, average, upper)</p>
+<h4 id="example_5">Example</h4>
+<pre><code class="language-python">from centaur_technical_indicators import candle_indicators as ci
+
+high_prices = [
+    105.0, 103.0, 107.0, 101.0, 103.0, 100.0, 109.0, 105.0,
+    110.0, 112.0, 111.0, 105.0, 106.0, 100.0, 103.0, 102.0, 98.0
+]
+low_prices = [
+    97.0, 99.0, 98.0, 100.0, 95.0, 98.0, 99.0, 100.0, 102.0, 106.0,
+    99.0, 101.0, 98.0, 93.0, 98.0, 91.0, 89.0
+]
+
+dc = ci.bulk.donchian_channels(
+    high_prices,
+    low_prices,
+    period=5
+)
+
+print(f&quot;Bulk Donchian Channels: {dc}&quot;)
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code>Bulk Donchian Channels: [
+    (95.0, 101.0, 107.0), (95.0, 101.0, 107.0), (95.0, 102.0, 109.0), (95.0, 102.0, 109.0), 
+    (95.0, 102.5, 110.0), (98.0, 105.0, 112.0), (99.0, 105.5, 112.0), (99.0, 105.5, 112.0), 
+    (98.0, 105.0, 112.0), (93.0, 102.5, 112.0), (93.0, 102.0, 111.0), (91.0, 98.5, 106.0), 
+    (89.0, 97.5, 106.0)
+]
+</code></pre>
+<hr />
+<h3 id="keltner_channel"><code>keltner_channel</code></h3>
+<pre><code class="language-python">keltner_channel(
+    high: List[float],
+    low: List[float],
+    close: List[float],
+    constant_model_type: str,
+    atr_constant_model_type: str,
+    multiplier: float,
+    period: int
+) -&gt; List[Tuple[float, float, float]]
+</code></pre>
+<h4 id="arguments_6">Arguments</h4>
+<ul>
+<li><strong>highs</strong>: List of price highs</li>
+<li><strong>lows</strong>: List of price lows</li>
+<li><strong>close</strong>: List of closing prices</li>
+<li><strong>constant_model_type</strong>: Choice of:<ul>
+<li><code>"simple_moving_average"</code></li>
+<li><code>"smoothed_moving_average"</code></li>
+<li><code>"exponential_moving_average"</code></li>
+<li><code>"simple_moving_median"</code></li>
+<li><code>"simple_moving_mode"</code></li>
+</ul>
+</li>
+<li><strong>atr_constant_model_type</strong>: Choice of:<ul>
+<li><code>"simple_moving_average"</code></li>
+<li><code>"smoothed_moving_average"</code></li>
+<li><code>"exponential_moving_average"</code></li>
+<li><code>"simple_moving_median"</code></li>
+<li><code>"simple_moving_mode"</code></li>
+</ul>
+</li>
+<li><strong>multiplier</strong>: Multiplier for the ATR</li>
+<li><strong>period</strong>: Period over which to calculate the Keltner Channel</li>
+</ul>
+<h4 id="returns_6">Returns</h4>
+<p>List of Keltner channel tuples</p>
+<h4 id="example_6">Example</h4>
+<pre><code class="language-python">from centaur_technical_indicators import candle_indicators as ci
+
+high_prices = [
+    105.0, 103.0, 107.0, 101.0, 103.0, 100.0, 109.0, 105.0,
+    110.0, 112.0, 111.0, 105.0, 106.0, 100.0, 103.0, 102.0, 98.0
+]
+low_prices = [
+    97.0, 99.0, 98.0, 100.0, 95.0, 98.0, 99.0, 100.0, 102.0, 106.0,
+    99.0, 101.0, 98.0, 93.0, 98.0, 91.0, 89.0
+]
+closing_prices = [
+    100.0, 102.0, 103.0, 101.0, 99.0, 99.0, 102.0, 103.0, 106.0,
+    107.0, 105.0, 104.0, 101.0, 97.0, 100.0, 96.0, 93.0
+]
+
+kc = ci.bulk.keltner_channel(
+    high_prices,
+    low_prices,
+    closing_prices,
+    constant_model_type=&quot;simple_moving_average&quot;,
+    atr_constant_model_type=&quot;simple_moving_average&quot;,
+    multiplier=2.0,
+    period=10
+)
+
+print(f&quot;Bulk Keltner Channel: {kc}&quot;)
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code>Bulk Keltner Channel: [
+    (90.16666666666667, 102.36666666666667, 114.56666666666668),
+    (89.8, 102.8, 115.8), (90.0, 103.0, 116.0), 
+    (90.10000000000002, 102.90000000000002, 115.70000000000002), 
+    (88.5, 102.5, 116.5), 
+    (89.23333333333332, 102.63333333333333, 116.03333333333333), 
+    (87.16666666666666, 102.36666666666666, 117.56666666666666),
+    (86.36666666666667, 101.36666666666667, 116.36666666666667)
+]
+</code></pre>
+<hr />
+<h3 id="supertrend"><code>supertrend</code></h3>
+<pre><code class="language-python">supertrend(
+    high: List[float],
+    low: List[float],
+    close: List[float],
+    constant_model_type: str,
+    multiplier: float,
+    period: int
+) -&gt; List[float]
+</code></pre>
+<h4 id="arguments_7">Arguments</h4>
+<ul>
+<li><strong>highs</strong>: List of price highs</li>
+<li><strong>lows</strong>: List of price lows</li>
+<li><strong>close</strong>: List of closing prices</li>
+<li><strong>constant_model_type</strong>: Choice of:<ul>
+<li><code>"simple_moving_average"</code></li>
+<li><code>"smoothed_moving_average"</code></li>
+<li><code>"exponential_moving_average"</code></li>
+<li><code>"simple_moving_median"</code></li>
+<li><code>"simple_moving_mode"</code></li>
+</ul>
+</li>
+<li><strong>multiplier</strong>: Multiplier for the ATR</li>
+<li><strong>period</strong>: Period over which to calculate the Keltner Channel</li>
+</ul>
+<h4 id="returns_7">Returns</h4>
+<p>List of Super Trend indicators</p>
+<h4 id="example_7">Example</h4>
+<pre><code class="language-python">from centaur_technical_indicators import candle_indicators as ci
+
+high_prices = [
+    105.0, 103.0, 107.0, 101.0, 103.0, 100.0, 109.0, 105.0,
+    110.0, 112.0, 111.0, 105.0, 106.0, 100.0, 103.0, 102.0, 98.0
+]
+low_prices = [
+    97.0, 99.0, 98.0, 100.0, 95.0, 98.0, 99.0, 100.0, 102.0, 106.0,
+    99.0, 101.0, 98.0, 93.0, 98.0, 91.0, 89.0
+]
+closing_prices = [
+    100.0, 102.0, 103.0, 101.0, 99.0, 99.0, 102.0, 103.0, 106.0,
+    107.0, 105.0, 104.0, 101.0, 97.0, 100.0, 96.0, 93.0
+]
+
+sptrnd = ci.bulk.supertrend(
+    high_prices,
+    low_prices,
+    closing_prices,
+    constant_model_type=&quot;simple_moving_average&quot;,
+    multiplier=2.0,
+    period=10
+)
+
+print(f&quot;Bulk Supertend : {sptrnd}&quot;)
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code>Bulk Supertend : [115.7, 116.5, 116.5, 116.3, 116.5, 115.9, 116.7, 115.5]
+</code></pre>
+<hr />
+<h2 id="single-functions">🟢 Single Functions</h2>
+<p>Single functions compute a single value for the latest available data slice.</p>
+<h3 id="moving_constant_envelopes_1"><code>moving_constant_envelopes</code></h3>
+<pre><code class="language-python">moving_constant_envelopes(
+    prices: List[float],
+    constant_model_type: str,
+    difference: float
+) -&gt; Tuple[float, float, float]
+</code></pre>
+<h4 id="arguments_8">Arguments</h4>
+<ul>
+<li><strong>prices</strong>: List of prices</li>
+<li><strong>constant_model_type</strong>: Choice of:<ul>
+<li><code>"simple_moving_average"</code></li>
+<li><code>"smoothed_moving_average"</code></li>
+<li><code>"exponential_moving_average"</code></li>
+<li><code>"simple_moving_median"</code></li>
+<li><code>"simple_moving_mode"</code></li>
+</ul>
+</li>
+<li><strong>difference</strong>: Percent band width (e.g., <code>3.0</code> for ±3%)</li>
+</ul>
+<h4 id="returns_8">Returns</h4>
+<p>Moving Constant Envelopes tuples (lower envelope, constant model result, upper envelope)</p>
+<h4 id="example_8">Example</h4>
+<pre><code class="language-python">from centaur_technical_indicators import candle_indicators as ci
+
+prices = [
+    100.0, 102.0, 103.0, 102.5, 102.8, 103.1, 103.8, 103.9,
+    104.4, 103.6, 103.1, 102.9, 103.3, 103.7
+]
+
+mce = ci.single.moving_constant_envelopes(
+    prices,
+    constant_model_type=&quot;simple_moving_average&quot;,
+    difference=2.0,
+)
+
+print(f&quot;Single Moving Constant Envelopes: {mce}&quot;)
+</code></pre>
+<p><strong>Output:</strong></p>
+<pre><code>Single Moving Constant Envelopes: (100.94699999999999, 103.00714285714285, 105.06728571428572)
+</code></pre>
+<hr />
+<h3 id="mcginley_dynamic_envelopes_1"><code>mcginley_dynamic_envelopes</code></h3>
+<pre><code class="language-python">mcginley_dynamic_envelopes(
+    prices: List[float],
+    difference: float,
+    previous_mcginley_dynamic: float
+) -&gt; Tuple[float, float, float]
+</code></pre>
+<h4 id="arguments_9">Arguments</h4>
+<ul>
+<li><strong>prices</strong>: List of prices</li>
+<li><strong>difference</strong>: Percent band width (e.g., <code>3.0</code> for ±3%)</li>
+<li><strong>previous_mcginley_dynamic</strong>: Previous McGinley dynamic (use <code>0.0</code> if none)</li>
+</ul>
+<h4 id="returns_9">Returns</h4>
+<p>McGinley dynamic envelopes tuple (lower envelope, McGinley dynamic, upper envelope)</p>
+<h4 id="example_9">Example</h4>
+<pre><code class="language-python">from centaur_technical_indicators import candle_indicators as ci
+
+prices = [
+    100.0, 102.0, 103.0, 102.5, 102.8, 103.1, 103.8, 103.9,
+    104.4, 103.6, 103.1, 102.9, 103.3, 103.7
+]
+
+mde = ci.single.mcginley_dynamic_envelopes(
+    prices,
+    difference=2.0,
+    previous_mcginley_dynamic=0.0,
+)
+
+print(f&quot;Single McGinley Dynamic Envelopes: {mde}&quot;)
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code>Single McGinley Dynamic Envelopes: (101.626, 103.7, 105.774)
+</code></pre>
+<hr />
+<h3 id="moving_constant_bands_1"><code>moving_constant_bands</code></h3>
+<pre><code class="language-python">moving_constant_bands(
+    prices: List[float],
+    constant_model_type: str,
+    deviation_model: str,
+    deviation_multiplier: float
+) -&gt; Tuple[float, float, float]
+</code></pre>
+<h4 id="arguments_10">Arguments</h4>
+<ul>
+<li><strong>prices</strong>: List of prices</li>
+<li><strong>constant_model_type</strong>: Choice of:<ul>
+<li><code>"simple_moving_average"</code></li>
+<li><code>"smoothed_moving_average"</code></li>
+<li><code>"exponential_moving_average"</code></li>
+<li><code>"simple_moving_median"</code></li>
+<li><code>"simple_moving_mode"</code></li>
+</ul>
+</li>
+<li><strong>deviation_model</strong>: Choice of:<ul>
+<li><code>"standard_deviation"</code></li>
+<li><code>"mean_absolute_deviation"</code></li>
+<li><code>"median_absolute_deviation"</code></li>
+<li><code>"mode_absolute_deviation"</code></li>
+<li><code>"ulcer_index"</code></li>
+</ul>
+</li>
+<li><strong>deviation_multiplier</strong>: Price deviation multiplier</li>
+</ul>
+<h4 id="returns_10">Returns</h4>
+<p>Moving constant bands tuple (lower band, constant model result, upper band)</p>
+<h4 id="example_10">Example</h4>
+<pre><code class="language-python">from centaur_technical_indicators import candle_indicators as ci
+
+prices = [
+    100.0, 102.0, 103.0, 102.5, 102.8, 103.1, 103.8, 103.9,
+    104.4, 103.6, 103.1, 102.9, 103.3, 103.7
+]
+
+mcb = ci.single.moving_constant_bands(
+    prices,
+    constant_model_type=&quot;simple_moving_average&quot;,
+    deviation_model=&quot;standard_deviation&quot;,
+    deviation_multiplier=2.0,
+)
+
+print(f&quot;Single Moving Constant Bands: {mcb}&quot;)
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code>Single Moving Constant Bands: (100.95989482874084, 103.00714285714285, 105.05439088554486)
+</code></pre>
+<hr />
+<h3 id="mcginley_dynamic_bands_1"><code>mcginley_dynamic_bands</code></h3>
+<pre><code class="language-python">mcginley_dynamic_bands(
+    prices: List[float],
+    deviation_model: str,
+    deviation_multiplier: float,
+    previous_mcginley_dynamic: float
+) -&gt; Tuple[float, float, float]
+</code></pre>
+<h4 id="arguments_11">Arguments</h4>
+<ul>
+<li><strong>prices</strong>: List of prices</li>
+<li><strong>deviation_model</strong>: Choice of:<ul>
+<li><code>"standard_deviation"</code></li>
+<li><code>"mean_absolute_deviation"</code></li>
+<li><code>"median_absolute_deviation"</code></li>
+<li><code>"mode_absolute_deviation"</code></li>
+<li><code>"ulcer_index"</code></li>
+</ul>
+</li>
+<li><strong>deviation_multiplier</strong>: Price deviation multiplier</li>
+<li><strong>previous_mcginley_dynamic</strong>: Previous McGinley dynamic (<code>0.0</code> if none)</li>
+</ul>
+<h4 id="returns_11">Returns</h4>
+<p>McGinley dynamic bands tuple (lower band, McGinley dynamic, upper band)</p>
+<h4 id="example_11">Example</h4>
+<pre><code class="language-python">from centaur_technical_indicators import candle_indicators as ci
+
+prices = [
+    100.0, 102.0, 103.0, 102.5, 102.8, 103.1, 103.8, 103.9,
+    104.4, 103.6, 103.1, 102.9, 103.3, 103.7
+]
+
+mdb = ci.single.mcginley_dynamic_bands(
+    prices,
+    deviation_model=&quot;standard_deviation&quot;,
+    deviation_multiplier=2.0,
+    previous_mcginley_dynamic=0.0,
+)
+
+print(f&quot;Single McGinley Dynamic Bands: {mdb}&quot;)
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code>Single McGinley Dynamic Bands: (101.652751971598, 103.7, 105.74724802840201)
+</code></pre>
+<hr />
+<h3 id="ichimoku_cloud_1"><code>ichimoku_cloud</code></h3>
+<pre><code class="language-python">ichimoku_cloud(
+    highs: List[float],
+    lows: List[float],
+    close: List[float],
+    conversion_period: int,
+    base_period: int,
+    span_b_period: int
+) -&gt; Tuple[float, float, float, float, float]
+</code></pre>
+<h4 id="arguments_12">Arguments</h4>
+<ul>
+<li><strong>highs</strong>: List of price highs</li>
+<li><strong>lows</strong>: List of price lows</li>
+<li><strong>close</strong>: List of closing prices</li>
+<li><strong>conversion_period</strong>: Period used to calculate the conversion line</li>
+<li><strong>base_period</strong>: Period used to calculate the base line</li>
+<li><strong>span_b_period</strong>: Period used to calculate the Span B line</li>
+</ul>
+<h4 id="returns_12">Returns</h4>
+<p>(leading span a, leading span b, base line, conversion line, relevant close price)</p>
+<h4 id="example_12">Example</h4>
+<pre><code class="language-python">from centaur_technical_indicators import candle_indicators as ci
+
+high_prices = [
+    105.0, 103.0, 107.0, 101.0, 103.0, 100.0, 109.0, 105.0,
+    110.0, 112.0, 111.0, 105.0, 106.0, 100.0, 103.0, 102.0, 98.0
+]
+low_prices = [
+    97.0, 99.0, 98.0, 100.0, 95.0, 98.0, 99.0, 100.0, 102.0, 106.0,
+    99.0, 101.0, 98.0, 93.0, 98.0, 91.0, 89.0
+]
+closing_prices = [
+    100.0, 102.0, 103.0, 101.0, 99.0, 99.0, 102.0, 103.0, 106.0,
+    107.0, 105.0, 104.0, 101.0, 97.0, 100.0, 96.0, 93.0
+]
+
+icloud = ci.single.ichimoku_cloud(
+    high_prices,
+    low_prices,
+    closing_prices,
+    conversion_period=5,
+    base_period=10,
+    span_b_period=15
+)
+
+print(f&quot;Single Ichimoku Cloud: {icloud}&quot;)
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code>Single Ichimoku Cloud: (99.0, 100.5, 100.5, 97.5, 103.0)
+</code></pre>
+<hr />
+<h3 id="donchian_channels_1"><code>donchian_channels</code></h3>
+<pre><code class="language-python">donchian_channels(
+    high: List[float],
+    low: List[float]
+) -&gt; Tuple[float, float, float]
+</code></pre>
+<h4 id="arguments_13">Arguments</h4>
+<ul>
+<li><strong>high</strong>: List of price highs</li>
+<li><strong>low</strong>: List of price lows</li>
+</ul>
+<h4 id="returns_13">Returns</h4>
+<p>Donchian channel tuple (lower, average, upper)</p>
+<h4 id="example_13">Example</h4>
+<pre><code class="language-python">from centaur_technical_indicators import candle_indicators as ci
+
+high_prices = [
+    105.0, 103.0, 107.0, 101.0, 103.0, 100.0, 109.0, 105.0,
+    110.0, 112.0, 111.0, 105.0, 106.0, 100.0, 103.0, 102.0, 98.0
+]
+low_prices = [
+    97.0, 99.0, 98.0, 100.0, 95.0, 98.0, 99.0, 100.0, 102.0, 106.0,
+    99.0, 101.0, 98.0, 93.0, 98.0, 91.0, 89.0
+]
+
+dc = ci.single.donchian_channels(
+    high_prices,
+    low_prices,
+)
+
+print(f&quot;Single Donchian Channels: {dc}&quot;)
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code>Single Donchian Channels: (89.0, 100.5, 112.0)
+</code></pre>
+<hr />
+<h3 id="keltner_channel_1"><code>keltner_channel</code></h3>
+<pre><code class="language-python">keltner_channel(
+    high: List[float],
+    low: List[float],
+    close: List[float],
+    constant_model_type: str,
+    atr_constant_model_type: str,
+    multiplier: float
+) -&gt; Tuple[float, float, float]
+</code></pre>
+<h4 id="arguments_14">Arguments</h4>
+<ul>
+<li><strong>highs</strong>: List of price highs</li>
+<li><strong>lows</strong>: List of price lows</li>
+<li><strong>close</strong>: List of closing prices</li>
+<li><strong>constant_model_type</strong>: Choice of:<ul>
+<li><code>"simple_moving_average"</code></li>
+<li><code>"smoothed_moving_average"</code></li>
+<li><code>"exponential_moving_average"</code></li>
+<li><code>"simple_moving_median"</code></li>
+<li><code>"simple_moving_mode"</code></li>
+</ul>
+</li>
+<li><strong>atr_constant_model_type</strong>: Choice of:<ul>
+<li><code>"simple_moving_average"</code></li>
+<li><code>"smoothed_moving_average"</code></li>
+<li><code>"exponential_moving_average"</code></li>
+<li><code>"simple_moving_median"</code></li>
+<li><code>"simple_moving_mode"</code></li>
+</ul>
+</li>
+<li><strong>multiplier</strong>: Multiplier for the ATR</li>
+</ul>
+<h4 id="returns_14">Returns</h4>
+<p>Keltner channel tuple</p>
+<h4 id="example_14">Example</h4>
+<pre><code class="language-python">from centaur_technical_indicators import candle_indicators as ci
+
+high_prices = [
+    105.0, 103.0, 107.0, 101.0, 103.0, 100.0, 109.0, 105.0,
+    110.0, 112.0, 111.0, 105.0, 106.0, 100.0, 103.0, 102.0, 98.0
+]
+low_prices = [
+    97.0, 99.0, 98.0, 100.0, 95.0, 98.0, 99.0, 100.0, 102.0, 106.0,
+    99.0, 101.0, 98.0, 93.0, 98.0, 91.0, 89.0
+]
+closing_prices = [
+    100.0, 102.0, 103.0, 101.0, 99.0, 99.0, 102.0, 103.0, 106.0,
+    107.0, 105.0, 104.0, 101.0, 97.0, 100.0, 96.0, 93.0
+]
+
+kc = ci.single.keltner_channel(
+    high_prices,
+    low_prices,
+    closing_prices,
+    constant_model_type=&quot;simple_moving_average&quot;,
+    atr_constant_model_type=&quot;simple_moving_average&quot;,
+    multiplier=2.0,
+)
+
+print(f&quot;Single Keltner Channel: {kc}&quot;)
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code>Single Keltner Channel: (87.4313725490196, 101.19607843137254, 114.96078431372548)
+</code></pre>
+<hr />
+<h3 id="supertrend_1"><code>supertrend</code></h3>
+<pre><code class="language-python">supertrend(
+    high: List[float],
+    low: List[float],
+    close: List[float],
+    constant_model_type: str,
+    multiplier: float
+) -&gt; float
+</code></pre>
+<h4 id="arguments_15">Arguments</h4>
+<ul>
+<li><strong>highs</strong>: List of price highs</li>
+<li><strong>lows</strong>: List of price lows</li>
+<li><strong>close</strong>: List of closing prices</li>
+<li><strong>constant_model_type</strong>: Choice of:<ul>
+<li><code>"simple_moving_average"</code></li>
+<li><code>"smoothed_moving_average"</code></li>
+<li><code>"exponential_moving_average"</code></li>
+<li><code>"simple_moving_median"</code></li>
+<li><code>"simple_moving_mode"</code></li>
+</ul>
+</li>
+<li><strong>multiplier</strong>: Multiplier for the ATR</li>
+</ul>
+<h4 id="returns_15">Returns</h4>
+<p>List of Super Trend indicators</p>
+<h4 id="example_15">Example</h4>
+<pre><code class="language-python">from centaur_technical_indicators import candle_indicators as ci
+
+high_prices = [
+    105.0, 103.0, 107.0, 101.0, 103.0, 100.0, 109.0, 105.0,
+    110.0, 112.0, 111.0, 105.0, 106.0, 100.0, 103.0, 102.0, 98.0
+]
+low_prices = [
+    97.0, 99.0, 98.0, 100.0, 95.0, 98.0, 99.0, 100.0, 102.0, 106.0,
+    99.0, 101.0, 98.0, 93.0, 98.0, 91.0, 89.0
+]
+closing_prices = [
+    100.0, 102.0, 103.0, 101.0, 99.0, 99.0, 102.0, 103.0, 106.0,
+    107.0, 105.0, 104.0, 101.0, 97.0, 100.0, 96.0, 93.0
+]
+
+sptrnd = ci.single.supertrend(
+    high_prices,
+    low_prices,
+    closing_prices,
+    constant_model_type=&quot;simple_moving_average&quot;,
+    multiplier=2.0,
+)
+
+print(f&quot;Single Supertend : {sptrnd}&quot;)
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code>Single Supertend : 114.26470588235294
+</code></pre>
+<hr />
+<h2 id="model-type-choices">🧩 Model Type Choices</h2>
+<p>Many functions accept model types as string arguments.<br />
+<strong>constant_model_type:</strong><br />
+- <code>"simple_moving_average"</code>
+- <code>"smoothed_moving_average"</code>
+- <code>"exponential_moving_average"</code>
+- <code>"simple_moving_median"</code>
+- <code>"simple_moving_mode"</code></p>
+<p><strong>deviation_model:</strong><br />
+- <code>"standard_deviation"</code>
+- <code>"mean_absolute_deviation"</code>
+- <code>"median_absolute_deviation"</code>
+- <code>"mode_absolute_deviation"</code>
+- <code>"ulcer_index"</code></p>
+<hr />
+<h2 id="notes">📝 Notes</h2>
+<ul>
+<li>All input lists must be of type <code>List[float]</code> (Python list of floats).</li>
+<li>Bulk functions require a <code>period</code> argument for window size.</li>
+<li>Some functions require previous values (<code>previous_mcginley_dynamic</code>).</li>
+</ul>
+<hr />
+<h2 id="see-also">🔗 See Also</h2>
+<ul>
+<li><a href="../">API Reference</a></li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
